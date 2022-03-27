@@ -2,7 +2,7 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
+// originlayout này không có sai anh chỉ để test thôi
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
