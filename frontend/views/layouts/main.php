@@ -40,6 +40,7 @@ AppAsset::register($this);
         $this->registerJsFile(Yii::getAlias('@web').'/js/plugins/jquery.vticker-min.js',['depends' => 'yii\web\JqueryAsset']);
         $this->registerJsFile(Yii::getAlias('@web').'/js/plugins/jquery.theia.sticky.js',['depends' => 'yii\web\JqueryAsset']);
         $this->registerJsFile(Yii::getAlias('@web').'/js/plugins/jquery.elevatezoom.js',['depends' => 'yii\web\JqueryAsset']);
+        $this->registerJsFile(Yii::getAlias('@web').'/js/plugins/imagesloaded.pkgd.min.js',['depends' => 'yii\web\JqueryAsset']);
         $this->registerJsFile(Yii::getAlias('@web').'/js/main.js',['depends' => 'yii\web\JqueryAsset']);
         $this->registerJsFile(Yii::getAlias('@web').'/js/shop.js',['depends' => 'yii\web\JqueryAsset']);
 
