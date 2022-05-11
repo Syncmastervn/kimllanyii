@@ -60,7 +60,7 @@ AppAsset::register($this);
     </div>
 
     <footer class="footer">
-        This is footer
+        
     </footer>
 
 <?php $this->endBody() ?>

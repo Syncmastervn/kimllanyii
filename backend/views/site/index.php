@@ -19,37 +19,104 @@ $this->registerCssFile(Yii::getAlias('@web').'/css/index-backend.css');
     </div>
 
     <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4 bg-primary text-white border-line">
-                <h2>Tạo hoá đơn mới </h2>
-
-                <p>
-                    Khu vực nhập thông tin sản phẩm và khách hàng để tạo hoá đơn mới trong hệ thống
-                </p>
-                <p>
-                    **Lưu ý: Khi tạo hoá đơn mới luôn xem xét kỹ cân nặng và số tiền cầm của khác hàng, sau khi chọn tạo hoá đơn mới thành công phải xem lại kết quả cho thật chính xác
-                </p><br>
-
-                <p><a class="btn btn-default" href="http://localhost/deposite/backend/web/index.php?r=dashboard/invoice-create">Tạo hoá đơn</a></p>
+        <div class="container">
+            <div class="form-group col-md-6">
+                <form class="form-horizontal" role="form">
+                    <h2>Registration Form</h2>
+                    <div class="form-group">
+                        <label for="firstName" class="col-sm-3 control-label">Full Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
+                            <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" id="email" placeholder="Email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" id="password" placeholder="Password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                        <div class="col-sm-9">
+                            <input type="date" id="birthDate" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="country" class="col-sm-3 control-label">Country</label>
+                        <div class="col-sm-9">
+                            <select id="country" class="form-control">
+                                <option>Afghanistan</option>
+                                <option>Bahamas</option>
+                                <option>Cambodia</option>
+                                <option>Denmark</option>
+                                <option>Ecuador</option>
+                                <option>Fiji</option>
+                                <option>Gabon</option>
+                                <option>Haiti</option>
+                            </select>
+                        </div>
+                    </div> <!-- /.form-group -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Gender</label>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="femaleRadio" value="Female">Female
+                                    </label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="maleRadio" value="Male">Male
+                                    </label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="uncknownRadio" value="Unknown">Unknown
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /.form-group -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Meal Preference</label>
+                        <div class="col-sm-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="calorieCheckbox" value="Low calorie">Low calorie
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="saltCheckbox" value="Low salt">Low salt
+                                </label>
+                            </div>
+                        </div>
+                    </div> <!-- /.form-group -->
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">I accept <a href="#">terms</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div> <!-- /.form-group -->
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        </div>
+                    </div>
+                </form> <!-- /form -->
             </div>
-            <div class="col-lg-4 bg-success text-dark border-line">
-                <h2>Tìm hoá đơn</h2>
-
-                <p>Khu vực nhập thông tin để tìm kiếm hoá đơn của khách hàng để thực hiện các thao tác xoá, chỉnh sửa và bổ sung thông tin</p>
-                <p>Người dùng được cấp quyền mới có thể xoá hoá đơn hoặc chỉnh sửa</p>
-                <br>
-                <p><a class="btn btn-default" href="http://localhost/deposite/backend/web/index.php?r=dashboard/search">Tìm hoá đơn</a></p>
-            </div>
-            <div class="col-lg-4 bg-info text-white border-line">
-                <h2>Kiểm tra giao dịch</h2>
-
-                <p>Khu vực hiển thị các thao tác tạo mới, gia hạn và kết thúc các hoá đơn theo ngày được chọn lựa để kiểm tra cuối ngày và kiểm tra tổng thể các hoạt động trong ngày</p>
-                <p>Khi kiểm tra nếu có vấn đề xảy ra phải thông báo ngay </p>
-                <br><br>
-                <p><a class="btn btn-default" href="http://localhost/deposite/backend/web/index.php?r=dashboard/monitor">Kiểm tra</a></p>
-            </div>
-        </div>
-
+            <div class="form-group col-md-6"></div>
+        </div> <!-- ./container -->
     </div>
 </div>
