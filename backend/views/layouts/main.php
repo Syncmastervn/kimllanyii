@@ -37,22 +37,43 @@ AppAsset::register($this);
      load _partial.php at views/folder, can use '/site/_partial' for more load
      </?= Yii::$app->controller->renderPartial('//_partial'); ?>
 -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav navbar-center">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
+<div class="wrap">
+    <?php
+    NavBar::begin([
+        'brandLabel' => Yii::$app->name,
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+            'class' => '',
+        ],
+    ]);
+    $menuItems = [
+        ['label' => 'Home', 'url' => 'http://192.168.1.68/deposite/frontend/web/index.php?r=site/index'],
+        ['label' => 'Login', 'url' => ['/site/login']],
+        ['label' => 'Thao tác',
+                'url' => ['#'],
+                'template' => '<a href="{url}">{label}<i class="fa fa-angle-left pull-right"></i></a>',
+            'items' => [
+                    ['label' => 'Tạo hoá đơn', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/invoice-create'],
+                    ['label' => 'Tìm hoá đơn', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/search'],
+                    ['label' => 'Xoá gia hạn', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/invoice-extend-delete'],
+                    ['label' => 'Báo cáo', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/chart'],
+                    ['label' => 'Quản lý người dùng', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/user-manager'],
+                    ['label' => 'Đăng ký', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/register'],
+                    ['label' => 'Đổi mật khẩu', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/changepassword'],
+                    ['label' => 'Kiểm tra hoá đơn', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/check-constantly'],
+                    ['label' => 'Kiểm tra giao dịch', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/monitor'],
+                    ['label' => 'Hoá đơn đã tạo', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/invoice-created'],
+                    ['label' => 'Truy xuất hoá đơn đóng', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/invoice-close-from-date'],
+                    ['label' => 'Logout', 'url' => Yii::getAlias('@web').'/index.php?r=dashboard/logout']
+                ]
+        //['label' => 'Logout', 'url' => ['/site/logout']]
+        ]];
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => $menuItems,
+    ]);
+    NavBar::end();
+    ?>
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
