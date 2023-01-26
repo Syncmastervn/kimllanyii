@@ -4,8 +4,8 @@
     $this->registerCssFile(Yii::getAlias('@web').'/css/main.css');
    
 ?>
-<div class="site-index">
 
+<div class="site-index">
     <!-- Modal -->
     <!-- <div class="modal fade custom-modal" id="onloadModal" tabindex="-1" aria-labelledby="onloadModalLabel" aria-hidden="true"></div> -->
 

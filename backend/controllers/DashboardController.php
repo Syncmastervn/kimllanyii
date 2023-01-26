@@ -32,7 +32,7 @@ class DashboardController extends Controller
      */
     public function actions()
     {
-        $this->isGuest = $this->behavior->isGuest();
+        //$this->isGuest = $this->behavior->isGuest();
         return [
         'error' => [
             'class' => 'yii\web\ErrorAction',
@@ -112,7 +112,7 @@ class DashboardController extends Controller
     public function actionTwigy()
     {
         $link = "http:/" . Yii::getAlias('@web') . "/index.php?r=dashboard/invoice-extend-delete&id=";
-        Yii::$app->controller->renderPartial('partial_view');
+        //Yii::$app->controller->renderPartial('partial_view');
         return $this->render('render.twig',[
             'username'  =>'Andie',
             'link'      => $link
