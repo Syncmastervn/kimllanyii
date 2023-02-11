@@ -9,12 +9,8 @@ use common\models\LoginForm;
 use backend\models\BehaviModel;
 
 //Use more _ KIEN CODE
-use backend\models\Register;
-use backend\models\User;
-use backend\models\Authority;
-use backend\models\ProductType;
-use backend\models\Login;
-use backend\models\DataRun;
+use backend\models\Product;
+
 
 /**
  * Site controller
@@ -64,6 +60,14 @@ class SiteController extends Controller
     {
         //$this->authority();
         return $this->render('index');
+    }
+
+    public function actionCreate()
+    {
+        $model = new Product();
+        return $this->render('createProduct',
+        ['model'=>$model]
+        );
     }
     
     /**
