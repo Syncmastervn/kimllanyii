@@ -62,12 +62,17 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function actionCreate()
+    public function actionCreate_product() 
     {
         $model = new Product();
         return $this->render('createProduct',
         ['model'=>$model]
         );
+    }
+
+    public function actionCreate_catefory() //Tạo loại vàng
+    {
+
     }
     
     /**
