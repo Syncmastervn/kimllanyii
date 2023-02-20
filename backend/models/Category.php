@@ -2,8 +2,8 @@
 
 namespace backend\models;
 
-use Yii;
-
+//use Yii;
+use yii\base\Model;
 /**
  * This is the model class for table "category".
  *
@@ -19,10 +19,12 @@ class Category extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
     public static function tableName()
     {
         return 'category';
     }
+    
 
     /**
      * @inheritdoc

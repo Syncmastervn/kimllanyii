@@ -10,6 +10,9 @@ use backend\models\BehaviModel;
 
 //Use more _ KIEN CODE
 use backend\models\Product;
+use backend\models\Category;
+
+
 
 
 /**
@@ -70,8 +73,18 @@ class SiteController extends Controller
         );
     }
 
-    public function actionCreate_catefory() //Tạo loại vàng
+    public function actionCreate_category() //Tạo loại vàng
     {
+        $model = new Category(); //Model này được tạo ra bằng gii 
+        $categoryData = Category::find()->all();
+        var_dump($categoryData);
+        $request = Yii::$app->request;
+        if($model->load(Yii::$app->request->post()) && $model->validate())
+        {
+            $name = $request->post('Category')['Name'];
+            echo $name;
+        }
+        return $this->render('CreateCategory',['model'=>$model]);
 
     }
     

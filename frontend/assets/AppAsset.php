@@ -22,7 +22,5 @@ class AppAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        // 'yii\bootstrap\BootstrapAsset',
-    ];
-    
+        // 'yii\bootstrap\BootstrapAsset',  <-- disable dòng này để tắt bootstrap có sẵn trong Yii 2.0 để sử dụng bootstrap trong themes
 }

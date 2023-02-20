@@ -1,0 +1,23 @@
+.table-header-orange {
+    background-color: #F4A111;
+    color: #FFFFFF;
+    font-style: bold;
+    font-size: 15px;
+    
+}
+
+.table-bg-grey {
+    background-color: rgb(241, 239, 239);
+}
+
+.table-bg-change-orange {
+    background-color: #F4A111;
+    animation-name: changeOrange;
+    animation-duration: 3s;
+    /*text-shadow: 1px 1px 1px #000000;*/
+  }
+  
+  @keyframes changeOrange {
+    from {background-color: #FFFACD; /*filter:blur(2px);*/}
+    to {background-color: #F4A111; /*filter:blur(0px);*/}
+  }
