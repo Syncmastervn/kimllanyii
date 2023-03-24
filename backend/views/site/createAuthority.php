@@ -3,13 +3,10 @@
     use yii\helpers\Html;
     use yii\helpers\ArrayHelper;
     use yii\widgets\ActiveForm;
-    use backend\models\Category;
+    use backend\models\Authority;
 
     $this->registerCssFile(Yii::getAlias('@web').'/css/table-themes.css');
 /* @var $this yii\web\View */
-
-    $this->title = 'Category';
-    $this->registerCssFile(Yii::getAlias('@web').'/css/index-backend.css');
 
     /** Popup thông báo sử dụng cho tất cả các site- KIEN's Codes
      *  1. File popup-modal.js - dùng Bootstrap 3.0
@@ -17,6 +14,10 @@
      *  3. dùng jquery kiểm tra nội dung modal-body để ẩn hoặc hiện popup
      */
     $this->registerJsFile(Yii::getAlias('@web').'/js/popup-modal.js',['depends' => 'yii\web\JqueryAsset']);
+
+
+$this->title = 'Category';
+$this->registerCssFile(Yii::getAlias('@web').'/css/index-backend.css');
 ?>
 <style>
     /** Ẩn đi nút bấm mở Popup của bootstrap, ẩn hoàn toàn không chiếm diện tích trang web */
@@ -29,7 +30,7 @@
     <div class="body-content">
         <div class="container">
             <div class="form-group col-md-6">
-                <?php $form = ActiveForm::begin(['id'=>'CreateCategoryForm']); ?>
+                <?php $form = ActiveForm::begin(['id'=>'CreateAuthorityForm']); ?>
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
                             <div class="col-sm-9">
@@ -38,7 +39,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-9">
-                                <?= $form->field($model, 'Price')->textInput(['type'=>'number'])->hint('Giá tiền'); ?>
+                                <?php echo Html::dropDownList('selector', null, $list_rank, ['class'=>'form-control']) ?>
                             </div>
                         </div>
                         <div class="form-group">
@@ -84,11 +85,13 @@
                 <?php $form = ActiveForm::end(); ?>
             <div class="form-group col-md-6"></div>
             <div class="form-group col-md-6">
-                <h3>Tạo Loại Vàng</h3>
-                <p>Chỉ tạo loại vàng
-                <p>Sau khi tạo loại vàng sẽ cập nhật giá ở một trang khác
+                <h3>Tạo Phân Quyền</h3>
+                <p>ADMIN: Người toàn quyền quản lý trong hệ thống
+                <p>MANAGER: Người có một số quyền quản lý trong hệ thống
+                <p>VIP: Người dùng có một số quyền cấp cao</p>
+                <p>USER: Người dùng bình thường</p>
             </div>
-            <?php if(!empty($categoryData)): 
+            <?php if(!empty($authorityData)): 
                 $i = 0;    
             ?>
 
@@ -97,20 +100,18 @@
                         <thead class="table-bg-change-orange">
                             <tr>
                             <th scope="col">Stt</th>
-                            <th scope="col">Họ và tên</th>
-                            <th scope="col">Địa chỉ</th>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Giá</th>
                             <th scope="col">Mô tả</th>
-                            <th scope="col">Ngày tạo</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($categoryData as $row): ?>
+                            <?php foreach($authorityData as $row): ?>
                                 <tr>
                                     <td><?= ++$i ?></td>
                                     <td><?= $row['Name'] ?></td>
-                                    <td><?= $row['Price'] ?></td>
                                     <td><?= $row['Description'] ?></td>
-                                    <td><?= $row['Date'] ?></td>
+                                    <td><?= $row['Rank'] ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -118,12 +119,11 @@
                 </div>
             
             <?php else: ?>
-                <h3>Chưa có dữ liệu trong bảng Category</h3>
+                <h3>Chưa có dữ liệu trong bảng Phân Quyền</h3>
             <?php endif; ?>    
         </div> <!-- ./container -->
     </div>
 </div>
-
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#smallShoes" id="modal-button">
 Click Me
 </button>

@@ -103,6 +103,10 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+
+    public function actionChart(){
+        return $this->render('chart');
+    }
     
     public function actionInvoiceClose(){
         $record = Invoice::find()
@@ -263,6 +267,10 @@ class SiteController extends Controller
         }
     }
 
+    public function actionProduct_full()
+    {
+        return $this->render('productFull');
+    }
     
     public function actionLogg()
     {

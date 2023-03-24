@@ -16,6 +16,7 @@ AppAsset::register($this);
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
+    <link rel="icon" href="../web/favicon.ico" type="image/x-icon" sizes="16x16">
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,9 +53,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
     <div class="wrap">
-        
 
-        
             <?= $content ?>
     
     </div>

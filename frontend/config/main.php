@@ -12,10 +12,14 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'modules' => [
-     /* disable and enable Gii */
-            'gii' => [
+        /* disable and enable Gii */
+        'gii' => [
             'class' => 'yii\gii\Module',
-            'allowedIPs' => ['127.0.0.1', '::1', '192.168.1.*',] // adjust this to your needs
+            'allowedIPs' => [
+                '127.0.0.1',
+                '::1',
+                '192.168.1.*',
+            ] // adjust this to your needs
         ],
     ],
     'controllerNamespace' => 'frontend\controllers',
@@ -46,10 +50,10 @@ return [
         ],
         /*
         'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
+        'enablePrettyUrl' => true,
+        'showScriptName' => false,
+        'rules' => [
+        ],
         ],
         */
     ],
