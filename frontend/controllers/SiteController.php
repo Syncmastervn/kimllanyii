@@ -149,6 +149,11 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
+    public function actionFullwidth()
+    {
+
+    }
+
     /**
      * Displays contact page.
      *
@@ -270,6 +275,11 @@ class SiteController extends Controller
     public function actionProduct_full()
     {
         return $this->render('productFull');
+    }
+
+    public function actionProduct()
+    {
+        return $this->render('product.twig',['alias_web'=>Yii::getAlias('@web')]);
     }
     
     public function actionLogg()

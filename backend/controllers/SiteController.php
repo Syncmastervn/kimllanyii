@@ -13,6 +13,7 @@ use backend\models\Product;
 use backend\models\Category;
 use backend\models\Authority;
 use backend\models\User;
+use yii\base\Action;
 
 
 
@@ -47,6 +48,17 @@ class SiteController extends Controller
     public function init() {
         
     }
+
+    //Kiểm tra Session , Login ..v..v trước khi thực thi các function chính
+    // public function beforeAction($action)
+    // {
+    //         if(Yii::$app->session->isActive)
+    //         {
+
+    //         } else{
+    //             echo "Vui lòng đăng nhập";
+    //         }
+    // }
 
     public function authority(){
         $this->sess = Yii::$app->session;
@@ -119,11 +131,11 @@ class SiteController extends Controller
             $record->save();
             
             $userData = User::find()->orderBy(['Date'=>SORT_DESC])->all();
-            return $this->render('CreateUser',['model'=>$model,'categoryData'=>$userData,'messages'=>"Lưu dữ liệu thành công"]);
+            return $this->render('createUser',['model'=>$model,'userData'=>$userData,'messages'=>"Lưu dữ liệu thành công"]);
         }else
         {
             $userData = User::find()->orderBy(['Date'=>SORT_DESC])->all();
-            return $this->render('CreateUser',['model'=>$model,'categoryData'=>$userData,'messages'=>'NoMessage']);
+            return $this->render('createUser',['model'=>$model,'userData'=>$userData,'messages'=>'NoMessage']);
         } 
         
 

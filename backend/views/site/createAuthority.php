@@ -15,9 +15,8 @@
      */
     $this->registerJsFile(Yii::getAlias('@web').'/js/popup-modal.js',['depends' => 'yii\web\JqueryAsset']);
 
-
-$this->title = 'Category';
-$this->registerCssFile(Yii::getAlias('@web').'/css/index-backend.css');
+    $this->title = 'Category';
+    $this->registerCssFile(Yii::getAlias('@web').'/css/index-backend.css');
 ?>
 <style>
     /** Ẩn đi nút bấm mở Popup của bootstrap, ẩn hoàn toàn không chiếm diện tích trang web */
