@@ -23,8 +23,11 @@ use Yii;
  * @property int $Status
  * @property string $Date
  */
+
+ 
 class User extends \yii\db\ActiveRecord
 {
+    public $RepeatPassword; //sử dụng để cho nhập lại password lần 2 
     /**
      * @inheritdoc
      */
@@ -47,6 +50,7 @@ class User extends \yii\db\ActiveRecord
             [['Password', 'Address'], 'string', 'max' => 200],
             [['FullName', 'CitizenId', 'Email', 'SocialNet', 'Notes'], 'string', 'max' => 100],
             [['Images'], 'string', 'max' => 150],
+            [['RepeatPassword'],'compare','compareAttribute'=>'password','message'=>"Password do not match"]
         ];
     }
 

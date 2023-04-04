@@ -53,6 +53,11 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-9">
+                                <?= $form->field($model, 'RepeatPassword')->textInput(['type'=>'password'])->hint('mật khẩu'); ?>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-9">
                                 <?= $form->field($model, 'Address')->textInput(['type'=>'text'])->hint('Địa chỉ'); ?>
                             </div>
                         </div>
@@ -131,6 +136,7 @@
                             <th scope="col">Stt</th>
                             <th scope="col table-text-blink">Tên</th>
                             <th scope="col">Tên đăng nhập</th>
+                            <th scope="col">Password</th>
                             <th scope="col">Địa chỉ</th>
                             <th scope="col">Ngày tạo</th>
                             </tr>
@@ -141,6 +147,7 @@
                                     <td><?= ++$i ?></td>
                                     <td><?= $row['FullName'] ?></td>
                                     <td><?= $row['UserName'] ?></td>
+                                    <td><?= $row['Password'] ?></td>
                                     <td><?= $row['Address'] ?></td>
                                     <td><?= $row['Date'] ?></td>
                                 </tr>

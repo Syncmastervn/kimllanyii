@@ -5,6 +5,8 @@ use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\helpers\Url;
+use yii\helpers\FileHelper;
 use common\models\LoginForm;
 use backend\models\BehaviModel;
 
@@ -13,10 +15,12 @@ use backend\models\Product;
 use backend\models\Category;
 use backend\models\Authority;
 use backend\models\User;
+use backend\models\Pictures;
 use yii\base\Action;
+use yii\web\UploadedFile;
 
 
-
+// ok xin mời 
 
 /**
  * Site controller
@@ -87,6 +91,32 @@ class SiteController extends Controller
         );
     }
 
+    public function actionMultiple()
+    {
+        $upload = new Pictures();
+        var_dump(Yii::$app->request->post());
+        if($upload->load(Yii::$app->request->post()))
+        {
+            $upload->Image = UploadedFile::getInstance($upload,'image');
+            if($upload->Image && $upload->validate())
+            {
+                $path = Url::to('/../uploads');
+                foreach($upload->Image as $image)
+                {
+                    $model = new Pictures();
+                    $model->ProductId = 1;
+                    $model->Image = rand(1,99) . '.' . $image->extension;
+                    if($model->save())
+                    {
+                        $image->saveAs($path.$model->Image);
+                    }
+                }
+            }
+
+        }
+        return $this->render('multipleUpload',['upload'=>$upload]);
+    }
+
     public function actionCreate_category() //Tạo loại vàng
     {
         $model = new Category(); //Model này được tạo ra bằng gii 
@@ -139,6 +169,16 @@ class SiteController extends Controller
         } 
         
 
+    }
+
+    public function actionFile_list()
+    {
+        $fileList = FileHelper::findFiles('../../uploads');
+        echo "<h2>FileList</h2>";
+        foreach($fileList as $file)
+        {
+            echo $file . "<br>";
+        }
     }
     
     public function actionCreate_authority()
