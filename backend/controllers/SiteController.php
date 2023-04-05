@@ -93,28 +93,36 @@ class SiteController extends Controller
 
     public function actionMultiple()
     {
-        $upload = new Pictures();
-        var_dump(Yii::$app->request->post());
-        if($upload->load(Yii::$app->request->post()))
-        {
-            $upload->Image = UploadedFile::getInstance($upload,'image');
-            if($upload->Image && $upload->validate())
-            {
-                $path = Url::to('/../uploads');
-                foreach($upload->Image as $image)
-                {
-                    $model = new Pictures();
-                    $model->ProductId = 1;
-                    $model->Image = rand(1,99) . '.' . $image->extension;
-                    if($model->save())
-                    {
-                        $image->saveAs($path.$model->Image);
-                    }
-                }
+        $model = new Pictures();
+        // $model = new UploadForm();
+        if (Yii::$app->request->isPost) {
+            $model->ProductId = 1;
+            $model->Image = UploadedFile::getInstances($model, 'Image');
+            if ($model->upload()) {
+                // file is uploaded successfully
+                return $this->render('multipleUpload',['upload'=>$model]);
             }
-
         }
-        return $this->render('multipleUpload',['upload'=>$upload]);
+        // if($upload->load(Yii::$app->request->post()))
+        // {
+        //     $upload->Image = UploadedFile::getInstance($upload,'image');
+        //     if($upload->Image && $upload->validate())
+        //     {
+        //         $path = Url::to('/../uploads');
+        //         foreach($upload->Image as $image)
+        //         {
+        //             $model = new Pictures();
+        //             $model->ProductId = 1;
+        //             $model->Image = rand(1,99) . '.' . $image->extension;
+        //             if($model->save())
+        //             {
+        //                 $image->saveAs($path.$model->Image);
+        //             }
+        //         }
+        //     }
+
+        // }
+        return $this->render('multipleUpload',['upload'=>$model]);
     }
 
     public function actionCreate_category() //Tạo loại vàng

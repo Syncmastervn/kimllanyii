@@ -26,9 +26,9 @@ $this->registerCssFile(Yii::getAlias('@web') . '/css/index-backend.css');
 <div class="site-index">
 
     <div class="body-content">
-        <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
-        <?= $form->field($upload, 'Image[]')->fileInput(['multiple' => true]); ?>
-        <?= Html::submitButton('Upload', ['class' => 'btn btn-success']) ?>
+        <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
+        <?= $form->field($upload, 'Image[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+        <button>Submit</button>
         <?php ActiveForm::end() ?>
     </div>
 </div>
