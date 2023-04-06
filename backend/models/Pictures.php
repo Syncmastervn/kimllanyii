@@ -59,7 +59,6 @@ class Pictures extends \yii\db\ActiveRecord
                 $smodel = new Picture();
                 $smodel->ProductId = $this->ProductId;
                 $smodel->Image = $name;
-                // exit;
                 if ($smodel->save()) {
                     $file->saveAs($path . $name);
                 }
