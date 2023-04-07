@@ -94,34 +94,14 @@ class SiteController extends Controller
     public function actionMultiple()
     {
         $model = new Pictures();
-        // $model = new UploadForm();
         if (Yii::$app->request->isPost) {
-            $model->ProductId = 1;
+            $model->ProductId = 0;
             $model->Image = UploadedFile::getInstances($model, 'Image');
             if ($model->upload()) {
                 // file is uploaded successfully
                 return $this->render('multipleUpload',['upload'=>$model]);
             }
         }
-        // if($upload->load(Yii::$app->request->post()))
-        // {
-        //     $upload->Image = UploadedFile::getInstance($upload,'image');
-        //     if($upload->Image && $upload->validate())
-        //     {
-        //         $path = Url::to('/../uploads');
-        //         foreach($upload->Image as $image)
-        //         {
-        //             $model = new Pictures();
-        //             $model->ProductId = 1;
-        //             $model->Image = rand(1,99) . '.' . $image->extension;
-        //             if($model->save())
-        //             {
-        //                 $image->saveAs($path.$model->Image);
-        //             }
-        //         }
-        //     }
-
-        // }
         return $this->render('multipleUpload',['upload'=>$model]);
     }
 

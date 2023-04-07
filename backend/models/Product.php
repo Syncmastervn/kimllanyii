@@ -41,7 +41,7 @@ class Product extends \yii\db\ActiveRecord
             [['CategoryId', 'Price', 'Discount', 'PriceExtra', 'Rank', 'UserId', 'Status'], 'integer'],
             [['Date', 'DateUpdate'], 'safe'],
             [['Name'], 'string', 'max' => 150],
-            [['Images'], 'string', 'max' => 250],
+            [['Images'], 'string', 'max' => 100],
             [['Description'], 'string', 'max' => 500],
         ];
     }

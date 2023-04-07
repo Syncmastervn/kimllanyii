@@ -30,7 +30,7 @@ class Picture extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['ProductId', 'Image'], 'required'],
+            [['Image'], 'required'],
             [['ProductId'], 'integer'],
             [['Date'], 'safe'],
             [['Image'], 'string'],
