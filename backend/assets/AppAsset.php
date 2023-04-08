@@ -18,6 +18,6 @@ class AppAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        //'yii\bootstrap\BootstrapAsset', bỏ dòng này để không chọn Bootstrap có sẵn trong Yii
     ];
 }

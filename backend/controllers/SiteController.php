@@ -86,9 +86,7 @@ class SiteController extends Controller
     public function actionCreate_product() 
     {
         $model = new Product();
-        return $this->render('createProduct',
-        ['model'=>$model]
-        );
+        return $this->render('createProduct',['model'=>$model]);
     }
 
     public function actionMultiple()
