@@ -79,8 +79,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        //$this->authority();
-        return $this->render('index');
+        $footerContent = "Nội dung Footer nè";
+        return $this->render('index',['footerContent' => $footerContent]);
+    }
+
+    public function actionBlank()
+    {
+        echo Yii::getAlias('@web');
     }
 
     public function actionCreate_product() 
