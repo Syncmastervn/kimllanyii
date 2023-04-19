@@ -4,12 +4,11 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 
 ?>
-
         <section class="content-main">
             <div class="content-header">
                 <div>
-                    <h2 class="content-title card-title">Tạo quyền sử dụng</h2>
-                    <p>Thêm, chỉnh sửa hoặc xóa các quyền sử dụng</p>
+                    <h2 class="content-title card-title">Tạo nhóm sản phẩm</h2>
+                    <p>Thêm,xóa và chỉnh sửa các loại nhóm sản phấm</p>
                 </div>
                 <div>
                     <input type="text" placeholder="Search Categories" class="form-control bg-white">
@@ -19,19 +18,16 @@ use yii\helpers\Html;
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-4">
-                        <?php $form = ActiveForm::begin(['id'=>'CreateAuthorityForm']); ?>
+                        <?php $form = ActiveForm::begin(['id'=>'CreateCategoryGroupForm']); ?>
                             <form>
                                 <div class="mb-4">
-                                    <label for="product_name" class="form-label">Tên</label>
-                                    <?= $form->field($model,'Name')->textInput(['autofocus'=>true, 'maxlength'=>30, 'class'=>'form-control'])->hint('Mô tả'); ?>
+                                    <?= $form->field($model,'Name')->textInput(['autofocus'=>true, 'maxlength'=>30, 'class'=>'form-control'])?>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="product_slug" class="form-label">Mô tả</label>
-                                    <?= $form->field($model,'Description')->textArea(['rows'=>4]); ?>
+                                    <?= $form->field($model,'Note')->textInput(['autofocus'=>true, 'maxlength'=>30, 'class'=>'form-control']) ?>
                                 </div>
                                 <div class="mb-4">
-                                    <label class="form-label">Lựa chọn</label>
-                                    <?php echo Html::dropDownList('selector', null, $list_rank, ['class'=>'form-control']) ?>
+                                    <?= $form->field($model,'Rank')->textInput(['autofocus'=>true, 'maxlength'=>30, 'class'=>'form-control']) ?>
                                 </div>
                                 <div class="d-grid">
                                     <button class="btn btn-primary">Tạo mới</button>
@@ -47,19 +43,19 @@ use yii\helpers\Html;
                                             <th>ID</th>
                                             <th>Tên</th>
                                             <th>Mô tả</th>
-                                            <th>Cấp bậc</th>
+                                            <th>Cấp độ</th>
                                             <th class="text-end">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <?php 
                                         $i =0;
-                                        foreach($authorityData as $row): 
+                                        foreach($PG_data as $row): 
                                     ?>
                                         <tr>
                                             <td><?= ++$i ?></td>
                                             <td><?= $row['Name'] ?></td>
-                                            <td><?= $row['Description'] ?></td>
+                                            <td><?= $row['Note'] ?></td>
                                             <td><?= $row['Rank'] ?></td>
                                             <td class="text-end">
                                                 <div class="dropdown">

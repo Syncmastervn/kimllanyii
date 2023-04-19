@@ -8,8 +8,8 @@ use yii\helpers\Html;
         <section class="content-main">
             <div class="content-header">
                 <div>
-                    <h2 class="content-title card-title">Tạo quyền sử dụng</h2>
-                    <p>Thêm, chỉnh sửa hoặc xóa các quyền sử dụng</p>
+                    <h2 class="content-title card-title">Tạo người sử dụng</h2>
+                    <p>Thêm, chỉnh sửa người sử dụng </p>
                 </div>
                 <div>
                     <input type="text" placeholder="Search Categories" class="form-control bg-white">
@@ -22,17 +22,33 @@ use yii\helpers\Html;
                         <?php $form = ActiveForm::begin(['id'=>'CreateAuthorityForm']); ?>
                             <form>
                                 <div class="mb-4">
-                                    <label for="product_name" class="form-label">Tên</label>
-                                    <?= $form->field($model,'Name')->textInput(['autofocus'=>true, 'maxlength'=>30, 'class'=>'form-control'])->hint('Mô tả'); ?>
+                                    <?= $form->field($model,'FullName')->textInput(['autofocus'=>true, 'maxlength'=>30, 'class'=>'form-control'])->hint('Họ và tên đầy đủ'); ?>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="product_slug" class="form-label">Mô tả</label>
-                                    <?= $form->field($model,'Description')->textArea(['rows'=>4]); ?>
+                                    <?= $form->field($model, 'UserName')->textInput(['type'=>'text']) ?>
                                 </div>
                                 <div class="mb-4">
-                                    <label class="form-label">Lựa chọn</label>
-                                    <?php echo Html::dropDownList('selector', null, $list_rank, ['class'=>'form-control']) ?>
+                                    <?= $form->field($model, 'AuthId')->textInput(['type'=>'number'])->hint('Phân quyền'); ?>
                                 </div>
+                                <div class="mb-4">
+                                    <?= $form->field($model, 'Password')->textInput(['type'=>'password']) ?>
+                                </div>
+                                <div class="mb-4">
+                                    <?= $form->field($model, 'Address')->textInput(['type'=>'text']) ?>
+                                </div>
+                                <div class="mb-4">
+                                    <?= $form->field($model, 'Email')->textInput(['type'=>'email']) ?>
+                                </div>
+                                <div class="mb-4">
+                                    <?= $form->field($model, 'Phone')->textInput(['type'=>'number']) ?>
+                                </div>
+                                <div class="mb-4">
+                                    <?= $form->field($model, 'CitizenId')->textInput(['type'=>'number']) ?>
+                                </div>
+                                <div class="mb-4">
+                                    <?= $form->field($model,'Notes')->textArea(['rows'=>4]); ?>
+                                </div>
+
                                 <div class="d-grid">
                                     <button class="btn btn-primary">Tạo mới</button>
                                 </div>
@@ -54,12 +70,12 @@ use yii\helpers\Html;
                                     <tbody>
                                     <?php 
                                         $i =0;
-                                        foreach($authorityData as $row): 
+                                        foreach($userData as $row):
                                     ?>
                                         <tr>
                                             <td><?= ++$i ?></td>
-                                            <td><?= $row['Name'] ?></td>
-                                            <td><?= $row['Description'] ?></td>
+                                            <td><?= $row['UserName'] ?></td>
+                                            <td><?= $row['Notes'] ?></td>
                                             <td><?= $row['Rank'] ?></td>
                                             <td class="text-end">
                                                 <div class="dropdown">

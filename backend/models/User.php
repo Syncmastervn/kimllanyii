@@ -49,8 +49,7 @@ class User extends \yii\db\ActiveRecord
             [['Phone'], 'string', 'max' => 20],
             [['Password', 'Address'], 'string', 'max' => 200],
             [['FullName', 'CitizenId', 'Email', 'SocialNet', 'Notes'], 'string', 'max' => 100],
-            [['Images'], 'string', 'max' => 150],
-            [['RepeatPassword'],'compare','compareAttribute'=>'password','message'=>"Password do not match"]
+            [['Images'], 'string', 'max' => 150]
         ];
     }
 
@@ -62,17 +61,17 @@ class User extends \yii\db\ActiveRecord
         return [
             'Id' => 'ID',
             'AuthId' => 'Auth ID',
-            'UserName' => 'User Name',
-            'Phone' => 'Phone',
+            'UserName' => 'Tên đăng nhập',
+            'Phone' => 'Điện thoại',
             'Password' => 'Password',
-            'FullName' => 'Full Name',
-            'Address' => 'Address',
-            'CitizenId' => 'Citizen ID',
+            'FullName' => 'Họ và Tên',
+            'Address' => 'Địa chỉ',
+            'CitizenId' => 'Căn cước công dân',
             'Email' => 'Email',
             'SocialNet' => 'Social Net',
             'Images' => 'Images',
-            'Notes' => 'Notes',
-            'Rank' => 'Rank',
+            'Notes' => 'Ghi chú',
+            'Rank' => 'Cấp',
             'Status' => 'Status',
             'Date' => 'Date',
         ];

@@ -47,9 +47,9 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             'Id' => 'ID',
-            'Name' => 'Name',
-            'Price' => 'Price',
-            'Description' => 'Description',
+            'Name' => 'Tên loại',
+            'Price' => 'Giá tiền',
+            'Description' => 'Mô tả',
             'Date' => 'Date',
             'Status' => 'Status',
         ];

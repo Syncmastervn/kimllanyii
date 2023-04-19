@@ -9,8 +9,8 @@ CREATE TABLE authority
     Id          INT UNSIGNED    NOT NULL AUTO_INCREMENT PRIMARY KEY,
     Name        CHAR(50)        NOT NULL,
     Description CHAR(200)       DEFAULT NULL,
-    Rank        TINYINT(1)      DEFAULT 0,
-	Status		TINYINT(1) 		DEFAULT 0
+    Rank        TINYINT(1)      DEFAULT 1,
+	Status		TINYINT(1) 		DEFAULT 1
 );
 
 CREATE TABLE user
@@ -28,7 +28,7 @@ CREATE TABLE user
 	Images		CHAR(150)		DEFAULT NULL,
 	Notes		CHAR(100)		DEFAULT NULL,
 	Rank		TINYINT(1)		DEFAULT NULL,
-    Status      TINYINT(1)      DEFAULT 0,
+    Status      TINYINT(1)      DEFAULT 1,
     Date        TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (AuthId) REFERENCES authority (Id)
 );
@@ -55,6 +55,15 @@ CREATE TABLE category_history
 	FOREIGN KEY (UserId)	REFERENCES user (Id)
 );
 
+CREATE TABLE product_group
+(
+	Id 			INT UNSIGNED	NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	Name		CHAR(80)		NOT NULL,
+	Note		CHAR(250)		NOT NULL,
+	Rank 		TINYINT			DEFAULT 1,
+	Status		TINYINT			DEFAULT 1
+);
+
 CREATE TABLE product
 (
     Id          INT UNSIGNED    NOT NULL AUTO_INCREMENT PRIMARY KEY ,
@@ -64,13 +73,15 @@ CREATE TABLE product
     Discount    INT UNSIGNED    DEFAULT NULL,
     PriceExtra  INT UNSIGNED    DEFAULT NULL,
     Images      CHAR(100)       DEFAULT NULL,
+	GroupId		INT UNSIGNED	NOT NULL,
     Date        TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
     DateUpdate  TIMESTAMP       NULL DEFAULT NULL,
     Rank        TINYINT      	DEFAULT 0,
     UserId      INT UNSIGNED    NOT NULL,
 	Description	VARCHAR(500)	DEFAULT NULL,
-    Status      TINYINT(1)      DEFAULT 0,
+    Status      TINYINT(1)      DEFAULT 1,
     FOREIGN KEY (CategoryId) REFERENCES category (Id) ON DELETE CASCADE,
+	FOREIGN KEY (GroupId) REFERENCES product_group (Id) ON DELETE CASCADE,
     INDEX (UserId,CategoryId)
 );
 
@@ -91,8 +102,7 @@ CREATE TABLE cart
 	Price 		INT UNSIGNED	NOT NULL,
 	Discount	INT UNSIGNED	DEFAULT NULL,
 	Price_plus	INT	UNSIGNED	DEFAULT NULL,
-	Status		TINYINT(1)		
-	DEFAULT 0,
+	Status		TINYINT(1)		DEFAULT 1,
 	Notes		VARCHAR(200)	DEFAULT NULL,
 	FOREIGN KEY (UserId) REFERENCES user (Id) ON DELETE CASCADE,
 	INDEX (UserId)

@@ -16,6 +16,7 @@ use backend\models\Category;
 use backend\models\Authority;
 use backend\models\User;
 use backend\models\Pictures;
+use backend\models\ProductGroup;
 use yii\base\Action;
 use yii\web\UploadedFile;
 
@@ -88,10 +89,27 @@ class SiteController extends Controller
         echo Yii::getAlias('@web');
     }
 
-    public function actionCreate_product() 
+    public function actionProduct_group()
     {
-        $model = new Product();
-        return $this->render('createProduct',['model'=>$model]);
+        $model = new ProductGroup();
+        $request = Yii::$app->request;
+        if($model->load(Yii::$app->request->post()) && $model->validate())
+        {
+            $record = new ProductGroup();
+            $record->Name = $request->post('ProductGroup')['Name'];
+            $record->Note = $request->post('ProductGroup')['Note'];
+            $record->Rank = $request->post('ProductGroup')['Rank'];
+            $record->save();
+            $PG_data = ProductGroup::find()->all();
+            return $this->render('createProductGroup',['model'=>$model,'PG_data'=>$PG_data,'message'=>'Tạo dữ liệu mới thành công']);
+        }
+        $PG_data = ProductGroup::find()->all();
+        return $this->render('createProductGroup',['model'=>$model,'PG_data'=>$PG_data,'message'=>'NoMessage']);
+    }
+
+    public function actionCreate_product()
+    {
+        return $this->render('createProduct');
     }
 
     public function actionMultiple()
@@ -121,24 +139,22 @@ class SiteController extends Controller
             $record->Description = $request->post('Category')['Description'];
             $record->save();
             $categoryData = Category::find()->orderBy(['Date'=>SORT_DESC])->all();
-            return $this->render('CreateCategory',['model'=>$model,'categoryData'=>$categoryData,'message'=>'Tạo dữ liệu mới thành công']);
+            return $this->render('createCategory',['model'=>$model,'categoryData'=>$categoryData,'message'=>'Tạo dữ liệu mới thành công']);
         }else
         {
             $categoryData = Category::find()->orderBy(['Date'=>SORT_DESC])->all();
-            return $this->render('CreateCategory',['model'=>$model,'categoryData'=>$categoryData,'message'=>'NoMessage']);
+            return $this->render('createCategory',['model'=>$model,'categoryData'=>$categoryData,'message'=>'NoMessage']);
         } 
-        
-
     }
 
-    public function actionCreate_user() //Tạo loại vàng
+
+    public function actionCreate_user() //Tạo người sử dụng
     {
         $model = new User(); //Model này được tạo ra bằng gii 
         $request = Yii::$app->request;
         $userData = new User();
         if($model->load(Yii::$app->request->post()) && $model->validate())
         {
-
             $record = new User;
             $record->AuthId = $request->post('User')['AuthId']; //Thiết lập mẫu mỗi khi tạo user đều là Admin
             $record->UserName = $request->post('User')['UserName'];
@@ -152,11 +168,11 @@ class SiteController extends Controller
             $record->save();
             
             $userData = User::find()->orderBy(['Date'=>SORT_DESC])->all();
-            return $this->render('createUser',['model'=>$model,'userData'=>$userData,'messages'=>"Lưu dữ liệu thành công"]);
+            return $this->render('_user',['model'=>$model,'userData'=>$userData,'messages'=>"Lưu dữ liệu thành công"]);
         }else
         {
             $userData = User::find()->orderBy(['Date'=>SORT_DESC])->all();
-            return $this->render('createUser',['model'=>$model,'userData'=>$userData,'messages'=>'NoMessage']);
+            return $this->render('_user',['model'=>$model,'userData'=>$userData,'messages'=>'NoMessage']);
         } 
         
 
