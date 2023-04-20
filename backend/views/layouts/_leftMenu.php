@@ -1,5 +1,4 @@
 
-
 <div class="screen-overlay"></div>
     <aside class="navbar-aside" id="offcanvas_aside">
         <div class="aside-top">
@@ -28,7 +27,7 @@
                         <a href="page-categories.html">Categories</a>
                     </div>
                 </li>
-                <li class="menu-item has-submenu">
+                <!-- <li class="menu-item has-submenu">
                     <a class="menu-link" href="page-orders-1.html"> <i class="icon material-icons md-shopping_cart"></i>
                         <span class="text">Orders</span>
                     </a>
@@ -37,7 +36,7 @@
                         <a href="page-orders-2.html">Order list 2</a>
                         <a href="page-orders-detail.html">Order detail</a>
                     </div>
-                </li>
+                </li> -->
                 <li class="menu-item has-submenu">
                     <a class="menu-link" href="page-sellers-cards.html"> <i class="icon material-icons md-store"></i>
                         <span class="text">Sellers</span>
@@ -50,13 +49,12 @@
                 </li>
                 <li class="menu-item has-submenu">
                     <a class="menu-link" href="page-form-product-1.html"> <i class="icon material-icons md-add_box"></i>
-                        <span class="text">Add product</span>
+                        <span class="text">Tạo sản phẩm</span>
                     </a>
                     <div class="submenu">
-                        <a href="page-form-product-1.html">Add product 1</a>
-                        <a href="page-form-product-2.html">Add product 2</a>
-                        <a href="page-form-product-3.html">Add product 3</a>
-                        <a href="page-form-product-4.html">Add product 4</a>
+                        <a href="<?= $address_web ?>create_category">Tạo loại sản phẩm</a>
+                        <a href="<?= $address_web ?>product_group">Tạo nhóm sản phẩm</a>
+                        <a href="<?= $address_web ?>create_product">Tạo sản phẩm</a>
                     </div>
                 </li>
                 <li class="menu-item has-submenu">

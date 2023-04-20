@@ -109,6 +109,9 @@ class SiteController extends Controller
 
     public function actionCreate_product()
     {
+        $model = new Product();
+        $category = new Category();
+        $productGroup = new ProductGroup();
         return $this->render('createProduct');
     }
 

@@ -1,0 +1,50 @@
+Step 1: Put .htaccess file in root.
+
+Options –Indexes
+
+<IfModule mod_rewrite.c> 
+  RewriteEngine on
+
+  RewriteCond %{REQUEST_URI} !^public
+  RewriteRule ^(.*)$ frontend/web/$1 [L] 
+</IfModule>
+
+# Deny accessing below extensions
+<Files ~ "(.json|.lock|.git)">
+Order allow,deny
+Deny from all
+</Files>
+
+# Deny accessing dot files
+RewriteRule (^\.|/\.) - [F]
+Step 2: Put .htaccess file in frontend/web.
+
+RewriteEngine on
+# If a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Otherwise forward it to index.php
+RewriteRule . index.php
+Step 3: Then changes in frontend/config/main.php. Following code need to be added inside 'components' => [].
+
+'request' => [
+ 'csrfParam' => '_csrf-frontend',
+ 'baseUrl' => '/yii-advanced', //http://localhost/yii-advanced
+],
+
+'urlManager' => [
+  'class' => 'yii\web\UrlManager',
+  'showScriptName' => false, // Disable index.php
+  'enablePrettyUrl' => true, // Disable r= routes
+  'rules' => array(
+          'about' => 'site/about',
+          'service' => 'site/service',
+          'contact' => 'site/contact',
+          'signup' => 'site/signup',
+          'login' => 'site/login',
+  ),
+],
+
+
+
+http://localhost/kimlanyii/frontend/web/gii  dùng để gọi Gii gen các Model
