@@ -55,14 +55,14 @@ CREATE TABLE category_history
 	FOREIGN KEY (UserId)	REFERENCES user (Id)
 );
 
-CREATE TABLE group
-{
+CREATE TABLE product_group
+(
 	Id 			INT UNSIGNED	NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	Name		CHAR(80)		NOT NULL,
 	Note		CHAR(250)		NOT NULL,
 	Rank 		TINYINT			DEFAULT 1,
 	Status		TINYINT			DEFAULT 1
-}
+);
 
 CREATE TABLE product
 (
@@ -81,6 +81,7 @@ CREATE TABLE product
 	Description	VARCHAR(500)	DEFAULT NULL,
     Status      TINYINT(1)      DEFAULT 1,
     FOREIGN KEY (CategoryId) REFERENCES category (Id) ON DELETE CASCADE,
+	FOREIGN KEY (GroupId) REFERENCES product_group (Id) ON DELETE CASCADE,
     INDEX (UserId,CategoryId)
 );
 

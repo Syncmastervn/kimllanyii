@@ -53,17 +53,17 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             'Id' => 'ID',
-            'Name' => 'Name',
-            'CategoryId' => 'Category ID',
-            'Price' => 'Price',
-            'Discount' => 'Discount',
-            'PriceExtra' => 'Price Extra',
+            'Name' => 'Tên sản phẩm',
+            'CategoryId' => 'Loại sản phẩm',
+            'Price' => 'Giá tiền',
+            'Discount' => 'Giảm giá',
+            'PriceExtra' => 'Giá thêm',
             'Images' => 'Images',
             'Date' => 'Date',
             'DateUpdate' => 'Date Update',
-            'Rank' => 'Rank',
+            'Rank' => 'Cấp độ',
             'UserId' => 'User ID',
-            'Description' => 'Description',
+            'Description' => 'Mô tả',
             'Status' => 'Status',
         ];
     }

@@ -79,7 +79,7 @@ CREATE TABLE product
     Rank        TINYINT      	DEFAULT 0,
     UserId      INT UNSIGNED    NOT NULL,
 	Description	VARCHAR(500)	DEFAULT NULL,
-    Status      TINYINT(1)      DEFAULT 1,
+    Status      TINYINT(1)      DEFAULT 0,
     FOREIGN KEY (CategoryId) REFERENCES category (Id) ON DELETE CASCADE,
 	FOREIGN KEY (GroupId) REFERENCES product_group (Id) ON DELETE CASCADE,
     INDEX (UserId,CategoryId)

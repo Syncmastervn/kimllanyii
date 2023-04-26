@@ -2,6 +2,7 @@
 namespace backend\controllers;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -110,9 +111,27 @@ class SiteController extends Controller
     public function actionCreate_product()
     {
         $model = new Product();
-        $category = new Category();
-        $productGroup = new ProductGroup();
-        return $this->render('createProduct');
+        $category_opt = [];
+        $group_opt = [];
+        $i = 0;
+        $category = Category::find()->all();
+        $productGroup = ProductGroup::find()->all();
+        $result = null;
+        foreach($category as $row)
+        {
+            array_push($category_opt,$row['Name']);
+        }
+        foreach($productGroup as $row)
+        {
+            array_push($group_opt,$row['Name']);
+        }
+        // Tìm nếu như Name giống với  thông số đã cho thì sẽ lấy object ra riêng
+        // foreach($category as $row)
+        // {
+        //     if($row->Name === "Vàng 610")
+        //         $result = $row;
+        // }
+        return $this->render('createProduct',['model'=>$model,'category_opt'=>$category_opt,'group_opt'=>$group_opt]);
     }
 
     public function actionMultiple()

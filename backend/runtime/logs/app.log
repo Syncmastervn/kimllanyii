@@ -7599,3 +7599,925 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1681892645.189
     'REQUEST_TIME' => 1681892645
 ]
+2023-04-20 03:26:20 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: backend\models\Category::name in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Component.php:148
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\db\BaseActiveRecord.php(288): yii\base\Component->__get('name')
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Model.php(990): yii\db\BaseActiveRecord->__get('name')
+#2 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(121): yii\base\Model->offsetGet('name')
+#3 [internal function]: backend\controllers\SiteController->actionCreate_product()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create_product', Array)
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/create_pro...', Array)
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2023-04-20 03:26:20 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_SEC_PURPOSE' => 'prefetch;prerender'
+    'HTTP_PURPOSE' => 'prefetch'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '55291'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681961180.1
+    'REQUEST_TIME' => 1681961180
+]
+2023-04-20 03:26:21 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: backend\models\Category::name in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Component.php:148
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\db\BaseActiveRecord.php(288): yii\base\Component->__get('name')
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Model.php(990): yii\db\BaseActiveRecord->__get('name')
+#2 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(121): yii\base\Model->offsetGet('name')
+#3 [internal function]: backend\controllers\SiteController->actionCreate_product()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create_product', Array)
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/create_pro...', Array)
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2023-04-20 03:26:21 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '55304'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681961181.216
+    'REQUEST_TIME' => 1681961181
+]
+2023-04-20 03:26:38 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: category_opt in C:\wamp64\www\kimlanyii\backend\views\site\createProduct.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render()
+#3 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(129): yii\base\Controller->render()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#9 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2023-04-20 03:26:38 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '55407'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681961198.318
+    'REQUEST_TIME' => 1681961198
+]
+2023-04-20 03:27:43 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: category_opt in C:\wamp64\www\kimlanyii\backend\views\site\createProduct.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render()
+#3 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(129): yii\base\Controller->render()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#9 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2023-04-20 03:27:43 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '55759'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681961263.729
+    'REQUEST_TIME' => 1681961263
+]
+2023-04-20 03:28:52 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in C:\wamp64\www\kimlanyii\backend\views\site\createProduct.php:116
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render()
+#3 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(129): yii\base\Controller->render()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#9 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2023-04-20 03:28:52 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '56056'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681961332.182
+    'REQUEST_TIME' => 1681961332
+]
+2023-04-20 03:29:14 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in C:\wamp64\www\kimlanyii\backend\views\site\createProduct.php:116
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render()
+#3 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(129): yii\base\Controller->render()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#9 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2023-04-20 03:29:14 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uHxgrfVEEsaC4zna95FDoihNGVD9P0oq\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/kimlanyii/backend/web/index.php?r=site/product_group'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uHxgrfVEEsaC4zna95FDoihNGVD9P0oq%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '56122'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681961354.103
+    'REQUEST_TIME' => 1681961354
+]
+2023-04-20 03:29:42 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: Illegal string offset 'Name' in C:\wamp64\www\kimlanyii\backend\views\site\createProduct.php:116
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render()
+#3 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(129): yii\base\Controller->render()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#9 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2023-04-20 03:29:42 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uHxgrfVEEsaC4zna95FDoihNGVD9P0oq\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/kimlanyii/backend/web/index.php?r=site/product_group'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uHxgrfVEEsaC4zna95FDoihNGVD9P0oq%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '56185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681961382.42
+    'REQUEST_TIME' => 1681961382
+]
+2023-04-20 03:55:18 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php:131
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(132): yii\helpers\BaseArrayHelper::getValue()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#3 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#7 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2023-04-20 03:55:18 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uHxgrfVEEsaC4zna95FDoihNGVD9P0oq\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uHxgrfVEEsaC4zna95FDoihNGVD9P0oq%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '60057'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681962918.621
+    'REQUEST_TIME' => 1681962918
+]
+2023-04-20 03:55:40 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php:131
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(132): yii\helpers\BaseArrayHelper::getValue()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#3 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#7 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2023-04-20 03:55:40 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uHxgrfVEEsaC4zna95FDoihNGVD9P0oq\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uHxgrfVEEsaC4zna95FDoihNGVD9P0oq%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '60058'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681962940.52
+    'REQUEST_TIME' => 1681962940
+]
+2023-04-20 03:57:02 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php:131
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(132): yii\helpers\BaseArrayHelper::getValue()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#3 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#7 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2023-04-20 03:57:02 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"uHxgrfVEEsaC4zna95FDoihNGVD9P0oq\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=bb888f8eef9070e517ee8d1985bcf6840ce97a45be631f92d7a95332cdf168eca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22uHxgrfVEEsaC4zna95FDoihNGVD9P0oq%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '60253'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1681963022.263
+    'REQUEST_TIME' => 1681963022
+]
+2023-04-21 06:13:02 [::1][-][-][error][Error] Error: Class 'ActiveForm' not found in C:\wamp64\www\kimlanyii\backend\views\site\createProduct.php:18
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(332): require()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('C:\\wamp64\\www\\k...', Array)
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\wamp64\\www\\k...', Array, Object(backend\controllers\SiteController))
+#3 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('createProduct', Array, Object(backend\controllers\SiteController))
+#4 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(134): yii\base\Controller->render('createProduct', Array)
+#5 [internal function]: backend\controllers\SiteController->actionCreate_product()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create_product', Array)
+#9 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/create_pro...', Array)
+#10 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#12 {main}
+2023-04-21 06:13:02 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e017baadb1e6a543440f60f29c78394cc72b59b39a419be325e3e899cd0ada67a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ldcS7CBmKIxel-xye7sDjtXn39jqUIG_\";}'
+    '_csrf-frontend' => '7f135b75fd1f12bc1234f0c02230d2e8cb4994b11e8a944b4dc18898e21083bea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"aawVzEgjgUHNjG656GHjScJCq3Oz5aTG\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=e017baadb1e6a543440f60f29c78394cc72b59b39a419be325e3e899cd0ada67a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ldcS7CBmKIxel-xye7sDjtXn39jqUIG_%22%3B%7D; _csrf-frontend=7f135b75fd1f12bc1234f0c02230d2e8cb4994b11e8a944b4dc18898e21083bea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22aawVzEgjgUHNjG656GHjScJCq3Oz5aTG%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '54021'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1682057582.646
+    'REQUEST_TIME' => 1682057582
+]
+2023-04-21 06:13:24 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in C:\wamp64\www\kimlanyii\backend\views\site\createProduct.php:27
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render()
+#3 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(134): yii\base\Controller->render()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#9 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2023-04-21 06:13:24 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e017baadb1e6a543440f60f29c78394cc72b59b39a419be325e3e899cd0ada67a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ldcS7CBmKIxel-xye7sDjtXn39jqUIG_\";}'
+    '_csrf-frontend' => '7f135b75fd1f12bc1234f0c02230d2e8cb4994b11e8a944b4dc18898e21083bea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"aawVzEgjgUHNjG656GHjScJCq3Oz5aTG\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=e017baadb1e6a543440f60f29c78394cc72b59b39a419be325e3e899cd0ada67a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ldcS7CBmKIxel-xye7sDjtXn39jqUIG_%22%3B%7D; _csrf-frontend=7f135b75fd1f12bc1234f0c02230d2e8cb4994b11e8a944b4dc18898e21083bea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22aawVzEgjgUHNjG656GHjScJCq3Oz5aTG%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '54049'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1682057604.568
+    'REQUEST_TIME' => 1682057604
+]
+2023-04-21 06:13:54 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in C:\wamp64\www\kimlanyii\backend\views\site\createProduct.php:27
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render()
+#3 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(134): yii\base\Controller->render()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#9 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2023-04-21 06:13:54 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e017baadb1e6a543440f60f29c78394cc72b59b39a419be325e3e899cd0ada67a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ldcS7CBmKIxel-xye7sDjtXn39jqUIG_\";}'
+    '_csrf-frontend' => '7f135b75fd1f12bc1234f0c02230d2e8cb4994b11e8a944b4dc18898e21083bea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"aawVzEgjgUHNjG656GHjScJCq3Oz5aTG\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=e017baadb1e6a543440f60f29c78394cc72b59b39a419be325e3e899cd0ada67a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ldcS7CBmKIxel-xye7sDjtXn39jqUIG_%22%3B%7D; _csrf-frontend=7f135b75fd1f12bc1234f0c02230d2e8cb4994b11e8a944b4dc18898e21083bea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22aawVzEgjgUHNjG656GHjScJCq3Oz5aTG%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '54050'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1682057634.315
+    'REQUEST_TIME' => 1682057634
+]
+2023-04-21 06:13:57 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in C:\wamp64\www\kimlanyii\backend\views\site\createProduct.php:27
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render()
+#3 C:\wamp64\www\kimlanyii\backend\controllers\SiteController.php(134): yii\base\Controller->render()
+#4 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): backend\controllers\SiteController->actionCreate_product()
+#5 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#6 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction()
+#8 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction()
+#9 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\kimlanyii\backend\web\index.php(17): yii\base\Application->run()
+#11 {main}
+2023-04-21 06:13:57 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/create_product'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => 'e017baadb1e6a543440f60f29c78394cc72b59b39a419be325e3e899cd0ada67a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ldcS7CBmKIxel-xye7sDjtXn39jqUIG_\";}'
+    '_csrf-frontend' => '7f135b75fd1f12bc1234f0c02230d2e8cb4994b11e8a944b4dc18898e21083bea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"aawVzEgjgUHNjG656GHjScJCq3Oz5aTG\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"112\", \"Google Chrome\";v=\"112\", \"Not:A-Brand\";v=\"99\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=e017baadb1e6a543440f60f29c78394cc72b59b39a419be325e3e899cd0ada67a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ldcS7CBmKIxel-xye7sDjtXn39jqUIG_%22%3B%7D; _csrf-frontend=7f135b75fd1f12bc1234f0c02230d2e8cb4994b11e8a944b4dc18898e21083bea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22aawVzEgjgUHNjG656GHjScJCq3Oz5aTG%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/backend/web/index.php'
+    'REMOTE_PORT' => '54181'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/create_product'
+    'REQUEST_URI' => '/kimlanyii/backend/web/index.php?r=site/create_product'
+    'SCRIPT_NAME' => '/kimlanyii/backend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1682057637.437
+    'REQUEST_TIME' => 1682057637
+]

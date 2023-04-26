@@ -1,8 +1,14 @@
+<?php
+
+use yii\widgets\ActiveForm;
+use yii\helpers\Html;
+
+?>
 <section class="content-main">
             <div class="row">
                 <div class="col-9">
                     <div class="content-header">
-                        <h2 class="content-title">Add New Product</h2>
+                        <h2 class="content-title">Tạo sản phẩm</h2>
                         <div>
                             <button class="btn btn-light rounded font-sm mr-5 text-body hover-up">Save to draft</button>
                             <button class="btn btn-md rounded font-sm hover-up">Publich</button>
@@ -15,78 +21,54 @@
                             <h4>Basic</h4>
                         </div>
                         <div class="card-body">
+                        <?php $form = ActiveForm::begin(['id'=>'CreateCategoryForm']); ?>
                             <form>
                                 <div class="mb-4">
-                                    <label for="product_name" class="form-label">Product title</label>
-                                    <input type="text" placeholder="Type here" class="form-control" id="product_name">
+                                    <?= $form->field($model,'Name')->textInput(['autofocus'=>true, 'maxlength'=>30, 'class'=>'form-control'])?>
                                 </div>
                                 <div class="mb-4">
-                                    <label class="form-label">Full description</label>
-                                    <textarea placeholder="Type here" class="form-control" rows="4"></textarea>
+                                    <?= $form->field($model,'Description')->textArea(['rows'=>4]); ?>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="mb-4">
-                                            <label class="form-label">Regular price</label>
                                             <div class="row gx-2">
-                                                <input placeholder="$" type="text" class="form-control">
+                                            <?= $form->field($model,'Price')->textInput(['autofocus'=>true, 'maxlength'=>30, 'class'=>'form-control'])?>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="mb-4">
-                                            <label class="form-label">Promotional price</label>
-                                            <input placeholder="$" type="text" class="form-control">
+                                            <?= $form->field($model,'Discount')->textInput(['autofocus'=>true, 'maxlength'=>30, 'class'=>'form-control'])?>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
-                                        <label class="form-label">Currency</label>
+                                        <!-- <label class="form-label">Currency</label>
                                         <select class="form-select">
                                             <option> USD </option>
                                             <option> EUR </option>
                                             <option> RUBL </option>
-                                        </select>
+                                        </select> -->
                                     </div>
                                 </div>
                                 <div class="mb-4">
-                                    <label class="form-label">Tax rate</label>
-                                    <input type="text" placeholder="%" class="form-control" id="product_name">
+                                    <button class="btn btn-primary">Tạo mới</button>
                                 </div>
                                 <label class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" value="">
-                                    <span class="form-check-label"> Make a template </span>
+                                    <!-- <input class="form-check-input" type="checkbox" value="">
+                                    <span class="form-check-label"> Make a template </span> -->
                                 </label>
                             </form>
+                            
                         </div>
                     </div> <!-- card end// -->
                     <div class="card mb-4">
                         <div class="card-header">
-                            <h4>Shipping</h4>
+                            <h4>Lưu ý:</h4>
                         </div>
                         <div class="card-body">
                             <form>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="mb-4">
-                                            <label for="product_name" class="form-label">Width</label>
-                                            <input type="text" placeholder="inch" class="form-control" id="product_name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="mb-4">
-                                            <label for="product_name" class="form-label">Height</label>
-                                            <input type="text" placeholder="inch" class="form-control" id="product_name">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <label for="product_name" class="form-label">Weight</label>
-                                    <input type="text" placeholder="gam" class="form-control" id="product_name">
-                                </div>
-                                <div class="mb-4">
-                                    <label for="product_name" class="form-label">Shipping fees</label>
-                                    <input type="text" placeholder="$" class="form-control" id="product_name">
-                                </div>
+                                Khi tạo sản phẩm thì phải chọn Loại sản phẩm và nhóm sản phẩm cho sản phẩm đang được tạo mới.
                             </form>
                         </div>
                     </div> <!-- card end// -->
@@ -105,37 +87,35 @@
                     </div> <!-- card end// -->
                     <div class="card mb-4">
                         <div class="card-header">
-                            <h4>Organization</h4>
+                            <h4>Chọn nhóm sản phẩm</h4>
                         </div>
                         <div class="card-body">
                             <div class="row gx-2">
-                                <div class="col-sm-6 mb-3">
-                                    <label class="form-label">Category</label>
+                                
+                                <div class="mb-4">
+                                    
+                                    <label class="form-label">Loại vàng</label>
                                     <select class="form-select">
-                                        <option> Automobiles </option>
-                                        <option> Home items </option>
-                                        <option> Electronics </option>
-                                        <option> Smartphones </option>
-                                        <option> Sport items </option>
-                                        <option> Baby and Tous </option>
+                                    <?php foreach($category_opt as $row): ?>
+                                        <option><?= $row ?></option>
+                                    <?php endforeach;?>
                                     </select>
-                                </div>
-                                <div class="col-sm-6 mb-3">
-                                    <label class="form-label">Sub-category</label>
-                                    <select class="form-select">
-                                        <option> Nissan </option>
-                                        <option> Honda </option>
-                                        <option> Mercedes </option>
-                                        <option> Chevrolet </option>
-                                    </select>
+                                
                                 </div>
                                 <div class="mb-4">
-                                    <label for="product_name" class="form-label">Tags</label>
-                                    <input type="text" class="form-control">
+                                
+                                    <label class="form-label">Nhóm sản phẩm</label>
+                                    <select class="form-select">
+                                        <?php foreach($group_opt as $row): ?>
+                                            <option><?= $row ?></option>
+                                        <?php endforeach;?>
+                                    </select>
+                                
                                 </div>
                             </div> <!-- row.// -->
                         </div>
                     </div> <!-- card end// -->
                 </div>
+                <?php $form = ActiveForm::end(); ?>
             </div>
         </section>
