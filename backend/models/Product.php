@@ -14,6 +14,7 @@ use Yii;
  * @property int $Discount
  * @property int $PriceExtra
  * @property string $Images
+ * @property int $GroupId
  * @property string $Date
  * @property string $DateUpdate
  * @property int $Rank
@@ -37,8 +38,8 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Name', 'CategoryId', 'UserId'], 'required'],
-            [['CategoryId', 'Price', 'Discount', 'PriceExtra', 'Rank', 'UserId', 'Status'], 'integer'],
+            [['Name', 'CategoryId', 'GroupId', 'UserId'], 'required'],
+            [['CategoryId', 'Price', 'Discount', 'PriceExtra', 'GroupId', 'Rank', 'UserId', 'Status'], 'integer'],
             [['Date', 'DateUpdate'], 'safe'],
             [['Name'], 'string', 'max' => 150],
             [['Images'], 'string', 'max' => 100],
@@ -53,17 +54,18 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             'Id' => 'ID',
-            'Name' => 'Tên sản phẩm',
-            'CategoryId' => 'Loại sản phẩm',
-            'Price' => 'Giá tiền',
-            'Discount' => 'Giảm giá',
-            'PriceExtra' => 'Giá thêm',
+            'Name' => 'Name',
+            'CategoryId' => 'Category ID',
+            'Price' => 'Price',
+            'Discount' => 'Discount',
+            'PriceExtra' => 'Price Extra',
             'Images' => 'Images',
+            'GroupId' => 'Group ID',
             'Date' => 'Date',
             'DateUpdate' => 'Date Update',
-            'Rank' => 'Cấp độ',
+            'Rank' => 'Rank',
             'UserId' => 'User ID',
-            'Description' => 'Mô tả',
+            'Description' => 'Description',
             'Status' => 'Status',
         ];
     }

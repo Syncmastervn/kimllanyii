@@ -18,7 +18,7 @@ use yii\helpers\Html;
                 <div class="col-lg-6">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <h4>Basic</h4>
+                            <h4>Nhập các thông tin yêu cầu</h4>
                         </div>
                         <div class="card-body">
                         <?php $form = ActiveForm::begin(['id'=>'CreateCategoryForm']); ?>
@@ -52,7 +52,22 @@ use yii\helpers\Html;
                                     </div>
                                 </div>
                                 <div class="mb-4">
+
+                                    <label class="form-label">Loại vàng</label>
+                                    <?php echo Html::dropDownList('categoryOpt', null, $category_opt, ['class' => 'form-select']);?>
+                                    
+
+                                </div>
+                                <div class="mb-4">
+
+                                    <label class="form-label">Nhóm sản phẩm</label>
+                                    <?php echo Html::dropDownList('productGroupOpt', null, $group_opt, ['class' => 'form-select']);?>
+                                    
+                                </div>
+                                <div class="mb-4">
+
                                     <button class="btn btn-primary">Tạo mới</button>
+                                    
                                 </div>
                                 <label class="form-check mb-4">
                                     <!-- <input class="form-check-input" type="checkbox" value="">
@@ -94,28 +109,25 @@ use yii\helpers\Html;
                                 
                                 <div class="mb-4">
                                     
-                                    <label class="form-label">Loại vàng</label>
-                                    <select class="form-select">
-                                    <?php foreach($category_opt as $row): ?>
-                                        <option><?= $row ?></option>
-                                    <?php endforeach;?>
-                                    </select>
+                                    <!-- <label class="form-label">Loại vàng</label>
+                                    <?php echo Html::dropDownList('categoryOpt', null, $category_opt, ['class' => 'form-select']);?> -->
                                 
                                 </div>
                                 <div class="mb-4">
                                 
-                                    <label class="form-label">Nhóm sản phẩm</label>
-                                    <select class="form-select">
+                                    <!-- <label class="form-label">Nhóm sản phẩm</label>
+                                    <select class="form-select" name="groupOpt">
                                         <?php foreach($group_opt as $row): ?>
                                             <option><?= $row ?></option>
                                         <?php endforeach;?>
-                                    </select>
-                                
+                                    </select> -->
+                                    
                                 </div>
                             </div> <!-- row.// -->
                         </div>
                     </div> <!-- card end// -->
                 </div>
+                
                 <?php $form = ActiveForm::end(); ?>
             </div>
         </section>

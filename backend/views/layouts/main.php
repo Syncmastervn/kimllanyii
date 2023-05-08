@@ -62,7 +62,7 @@
 <?php $this->beginBody() ?>
 <div class="wrap">
     <div class="container">
-    <?php echo $this->render('_leftMenu',['address_web'=>'http://localhost'.Yii::getAlias('@web').'/index.php?r=site/']); ?>
+    <?php //echo $this->render('_leftMenu',['address_web'=>'http://localhost'.Yii::getAlias('@web').'/index.php?r=site/']); ?>
         <main class="main-wrap">
             
             <?php echo $this->render('_headerNavbar'); ?>

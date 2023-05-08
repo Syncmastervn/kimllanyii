@@ -111,7 +111,10 @@ class SiteController extends Controller
     public function actionCreate_product()
     {
         $model = new Product();
+        $request = Yii::$app->request;
         $category_opt = [];
+        $categoryId = [];
+        $groupId = [];
         $group_opt = [];
         $i = 0;
         $category = Category::find()->all();
@@ -120,17 +123,27 @@ class SiteController extends Controller
         foreach($category as $row)
         {
             array_push($category_opt,$row['Name']);
+            array_push($categoryId,$row['Id']);
         }
         foreach($productGroup as $row)
         {
             array_push($group_opt,$row['Name']);
+            array_push($groupId,$row['Id']);
         }
-        // Tìm nếu như Name giống với  thông số đã cho thì sẽ lấy object ra riêng
-        // foreach($category as $row)
-        // {
-        //     if($row->Name === "Vàng 610")
-        //         $result = $row;
-        // }
+        if($model->load(Yii::$app->request->post()))
+        {
+            $record = new Product();
+            $record->Name = $request->post('Product')['Name'];
+            $record->Description = $request->post('Product')['Description'];
+            $record->Price = (int)$request->post('Product')['Price'];
+            $record->Discount = (int)$request->post('Product')['Discount'];
+            $record->CategoryId = $categoryId[(int)$request->post('categoryOpt')];
+            $record->GroupId = $groupId[(int)$request->post('productGroupOpt')];
+            $record->UserId = 1;
+            $record->save();
+        }
+        
+        //var_dump($category_opt[(int)$request->post('categoryOpt')]);
         return $this->render('createProduct',['model'=>$model,'category_opt'=>$category_opt,'group_opt'=>$group_opt]);
     }
 
