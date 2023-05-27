@@ -18,6 +18,7 @@ use backend\models\Authority;
 use backend\models\User;
 use backend\models\Pictures;
 use backend\models\ProductGroup;
+use backend\models\Picture;
 use yii\base\Action;
 use yii\web\UploadedFile;
 
@@ -111,15 +112,23 @@ class SiteController extends Controller
     public function actionCreate_product()
     {
         $model = new Product();
+        $pics = new Picture();
         $request = Yii::$app->request;
         $category_opt = [];
         $categoryId = [];
         $groupId = [];
         $group_opt = [];
+        $pics_opt = [];
+        $picsId = [];
         $i = 0;
+        $pics = Picture::find()->where(['ProductId'=>0])->all();
         $category = Category::find()->all();
         $productGroup = ProductGroup::find()->all();
-        $result = null;
+        foreach($pics as $row)
+        {
+            array_push($pics_opt,$row['Image']);
+            array_push($picsId,$row['Id']);
+        }
         foreach($category as $row)
         {
             array_push($category_opt,$row['Name']);
@@ -141,12 +150,38 @@ class SiteController extends Controller
             $record->GroupId = $groupId[(int)$request->post('productGroupOpt')];
             $record->UserId = 1;
             $record->save();
+            $recordId = $record->Id; //Lấy Id của record vừa lưu trong CSDL
+            //Set to cache 
+            Yii::$app->cache->set('productName',$record->Name,600);
+            Yii::$app->cache->set('productId',$recordId,600);
+
+            $model = new Pictures();
+            $model->ProductId = $recordId;
+            $model->Image = UploadedFile::getInstances($model, 'Image');
+            return $this->render('uploadFiles',['upload'=>$model]);
+        }else
+        {
+            return $this->render('createProduct',['model'=>$model,'category_opt'=>$category_opt,'group_opt'=>$group_opt]);
         }
         
-        //var_dump($category_opt[(int)$request->post('categoryOpt')]);
-        return $this->render('createProduct',['model'=>$model,'category_opt'=>$category_opt,'group_opt'=>$group_opt]);
     }
 
+    public function actionUpload_files()
+    {
+        $model = new Pictures();
+        if (Yii::$app->request->isPost) {
+            $model->ProductId = 0;
+            $model->Image = UploadedFile::getInstances($model, 'Image');
+            if ($model->upload()) {
+                // file is uploaded successfully
+                //return $this->render('uploadFiles',['upload'=>$model]);
+                $this->redirect(['site/create_product']);
+            }
+        }
+        return $this->render('uploadFiles',['upload'=>$model]);
+    }
+
+    //Action gốc làm upload file
     public function actionMultiple()
     {
         $model = new Pictures();
@@ -155,6 +190,7 @@ class SiteController extends Controller
             $model->Image = UploadedFile::getInstances($model, 'Image');
             if ($model->upload()) {
                 // file is uploaded successfully
+                // return $this->render('muntipleUpdate');
                 return $this->render('multipleUpload',['upload'=>$model]);
             }
         }
@@ -219,7 +255,7 @@ class SiteController extends Controller
         echo "<h2>FileList</h2>";
         foreach($fileList as $file)
         {
-            echo $file . "<br>";
+            echo basename($file) . "<br>";
         }
     }
     
