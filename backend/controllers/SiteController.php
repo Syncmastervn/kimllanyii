@@ -20,6 +20,7 @@ use backend\models\Pictures;
 use backend\models\ProductGroup;
 use backend\models\Picture;
 use yii\base\Action;
+use yii\base\Security;
 use yii\web\UploadedFile;
 
 
@@ -261,7 +262,7 @@ class SiteController extends Controller
     
     public function actionCreate_authority()
     {
-        $model = New Authority();
+        $model = new Authority();
         $request = Yii::$app->request;
         $list_rank = ['1'=>'Admin', '2'=>'Manager', '3'=>'User', '4'=>'VIP'];
         if($model->load(Yii::$app->request->post()) && $model->validate())
@@ -288,7 +289,25 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        echo "This is login site";
+        $security = new Security();
+        $model = new User();
+        $request = Yii::$app->request;
+        $session = Yii::$app->session;
+        $session->destroy();
+        if($model->load(Yii::$app->request->post()))
+        {
+            $record = User::findOne(['UserName'=>$request->post('User')['UserName']]);
+            if($record !== null && $security->validatePassword($request->post('User')['Password'],$record->Password))
+            {
+                $session->open();
+                $session->setName('Login');
+                $session->set('user_id',$record->Id);
+                $session->set('user_status',$record->Status);
+                $session->set('username',$record->UserName);
+                return $this->render('login_success',['username'=>$record->UserName]);
+            }
+        }
+        return $this->render('login',['model'=>$model]);
     }
 
     /**
@@ -302,6 +321,29 @@ class SiteController extends Controller
         //return $this->goHome();
     }
     
+    public function actionChange_password()
+    {
+        $session = Yii::$app->session;
+        $session->get('user_id');
+        
+    }
+
+    //Function này dùng để thay đổi mặc định password cho admin
+    public function actionAdmin_password()
+    {
+        $security = new Security();
+        $hashedPassword = $security->generatePasswordHash('admin88');
+        $record = User::findOne(1);
+        $record->Password = $hashedPassword;
+        if($record->save())
+        {
+            echo 'Mật khẩu Admin đã thay đổi mặc định thành công';
+        }else
+        {
+            echo 'Mật khẩu Admin thay đổi không thành công';
+        }
+    }   
+
     /*
     * Register admini/manager user
     */
@@ -323,11 +365,6 @@ class SiteController extends Controller
             {
                 echo "User not exists";
             }
-            
-//            return $this->render('register',[
-//                'model' =>  $model,
-//                'login' =>  $get
-//            ]);
         } else
         {
             return $this->render('register',[

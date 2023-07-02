@@ -39,6 +39,8 @@
         $this->registerJsFile(Yii::getAlias('@web').'/js/vendors/chart.js',['depends' => 'yii\web\JqueryAsset']);
         $this->registerJsFile(Yii::getAlias('@web').'/js/main.js',['depends' => 'yii\web\JqueryAsset']);
         $this->registerJsFile(Yii::getAlias('@web').'/js/custom-chart.js',['depends' => 'yii\web\JqueryAsset']);
+
+
     ?>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
@@ -62,7 +64,15 @@
 <?php $this->beginBody() ?>
 <div class="wrap">
     <div class="container">
-    <?php //echo $this->render('_leftMenu',['address_web'=>'http://localhost'.Yii::getAlias('@web').'/index.php?r=site/']); ?>
+    <?php
+        $session = Yii::$app->session;
+        $session->open();
+        if($session->has('user_id'))
+        {
+            echo $this->render('_leftMenu',['address_web'=>'http://localhost'.Yii::getAlias('@web').'/index.php?r=site/']);
+        }
+        
+    ?>
         <main class="main-wrap">
             
             <?php echo $this->render('_headerNavbar'); ?>

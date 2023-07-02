@@ -13,6 +13,9 @@ CREATE TABLE authority
 	Status		TINYINT(1) 		DEFAULT 1
 );
 
+INSERT INTO authority (Name,Description)
+VALUES('Admin','Administrator');
+
 CREATE TABLE user
 (
     Id          INT UNSIGNED    NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -32,6 +35,9 @@ CREATE TABLE user
     Date        TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (AuthId) REFERENCES authority (Id)
 );
+
+INSERT INTO user (AuthId,UserName,Password,FullName,CitizenId)
+VALUES (1,'admin','123456','Quan tri vien','00000000');
 
 CREATE TABLE category 
 (

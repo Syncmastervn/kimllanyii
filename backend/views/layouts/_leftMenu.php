@@ -68,11 +68,11 @@
                 </li>
                 <li class="menu-item has-submenu">
                     <a class="menu-link" href="#"> <i class="icon material-icons md-person"></i>
-                        <span class="text">Account</span>
+                        <span class="text">Tài khoản</span>
                     </a>
                     <div class="submenu">
-                        <a href="page-account-login.html">User login</a>
-                        <a href="page-account-register.html">User registration</a>
+                        <a href="page-account-login.html">Đăng nhập người dùng</a>
+                        <a href="page-account-register.html">Tạo người sử dụng</a>
                         <a href="page-error-404.html">Error 404</a>
                     </div>
                 </li>

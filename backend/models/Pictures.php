@@ -5,6 +5,8 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\helpers\Url;
+use yii\backend\Models;
+
 
 /**
  * This is the model class for table "pictures".
@@ -55,7 +57,7 @@ class Pictures extends \yii\db\ActiveRecord
         $path = dirname(__FILE__) . '/../../uploads/';
         if ($this->Image && $this->validate()) {
             foreach ($this->Image as $file) {
-                $name = $file->baseName . '_' . rand(1, 99) . '.' . $file->extension;
+                $name = $file->baseName .  rand(1, 999) . '.' . $file->extension;
                 $smodel = new Picture();
                // $smodel->ProductId = $this->ProductId;
                 $smodel->ProductId = Yii::$app->cache->get('productId');
