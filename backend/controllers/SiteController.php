@@ -58,15 +58,26 @@ class SiteController extends Controller
     }
 
     //Kiểm tra Session , Login ..v..v trước khi thực thi các function chính
-    // public function beforeAction($action)
-    // {
-    //         if(Yii::$app->session->isActive)
-    //         {
-
-    //         } else{
-    //             echo "Vui lòng đăng nhập";
-    //         }
-    // }
+    public function beforeAction($action)
+    {
+            $session = Yii::$app->session;
+            if(!$session->isActive)
+            {
+                $session->open();
+            }
+            if(!$session->has('user_id'))
+            {
+                if(Yii::$app->controller->action->id != 'login')
+                {
+                    //return $this->render('login_failed');
+                    $this->redirect(array('site/login'));
+                }else
+                {
+                    return true;
+                }
+            }
+            return true;
+    }
 
     public function authority(){
         $this->sess = Yii::$app->session;
@@ -153,13 +164,13 @@ class SiteController extends Controller
             $record->save();
             $recordId = $record->Id; //Lấy Id của record vừa lưu trong CSDL
             //Set to cache 
-            Yii::$app->cache->set('productName',$record->Name,600);
-            Yii::$app->cache->set('productId',$recordId,600);
+            Yii::$app->cache->set('productName',$record->Name,300);
+            Yii::$app->cache->set('productId',$recordId,300);
 
             $model = new Pictures();
             $model->ProductId = $recordId;
             $model->Image = UploadedFile::getInstances($model, 'Image');
-            return $this->render('uploadFiles',['upload'=>$model]);
+            $this->redirect(['site/upload_files']);
         }else
         {
             return $this->render('createProduct',['model'=>$model,'category_opt'=>$category_opt,'group_opt'=>$group_opt]);
@@ -169,17 +180,19 @@ class SiteController extends Controller
 
     public function actionUpload_files()
     {
+        $productId = Yii::$app->cache->get('productId');
+        $productName = Yii::$app->cache->get('productName');
         $model = new Pictures();
         if (Yii::$app->request->isPost) {
             $model->ProductId = 0;
             $model->Image = UploadedFile::getInstances($model, 'Image');
             if ($model->upload()) {
                 // file is uploaded successfully
-                //return $this->render('uploadFiles',['upload'=>$model]);
-                $this->redirect(['site/create_product']);
+                return $this->render('uploadFiles',['upload'=>$model,'productId'=>$productId,'productName'=>$productName]);
+                //$this->redirect(['site/create_product']);
             }
         }
-        return $this->render('uploadFiles',['upload'=>$model]);
+        return $this->render('uploadFiles',['upload'=>$model,'productId'=>$productId,'productName'=>$productName]);
     }
 
     //Action gốc làm upload file
