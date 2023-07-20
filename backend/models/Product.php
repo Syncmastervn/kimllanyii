@@ -20,6 +20,8 @@ use Yii;
  * @property int $Rank
  * @property int $UserId
  * @property string $Description
+ * @property string $Tags
+ * @property int $Interaction
  * @property int $Status
  */
 class Product extends \yii\db\ActiveRecord
@@ -39,11 +41,11 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['Name', 'CategoryId', 'GroupId', 'UserId'], 'required'],
-            [['CategoryId', 'Price', 'Discount', 'PriceExtra', 'GroupId', 'Rank', 'UserId', 'Status'], 'integer'],
+            [['CategoryId', 'Price', 'Discount', 'PriceExtra', 'GroupId', 'Rank', 'UserId', 'Interaction', 'Status'], 'integer'],
             [['Date', 'DateUpdate'], 'safe'],
-            [['Name'], 'string', 'max' => 150],
+            [['Description'], 'string'],
+            [['Name', 'Tags'], 'string', 'max' => 150],
             [['Images'], 'string', 'max' => 100],
-            [['Description'], 'string', 'max' => 500],
         ];
     }
 
@@ -66,6 +68,8 @@ class Product extends \yii\db\ActiveRecord
             'Rank' => 'Rank',
             'UserId' => 'User ID',
             'Description' => 'Description',
+            'Tags' => 'Tags',
+            'Interaction' => 'Interaction',
             'Status' => 'Status',
         ];
     }

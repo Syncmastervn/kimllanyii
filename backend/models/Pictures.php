@@ -54,7 +54,7 @@ class Pictures extends \yii\db\ActiveRecord
 
     public function upload()
     {
-        $path = dirname(__FILE__) . '/../../uploads/';
+        $path = dirname(__FILE__) . '/../../frontend/web/imgs/shop/';
         if ($this->Image && $this->validate()) {
             foreach ($this->Image as $file) {
                 //$name = $file->baseName . 'ID' . Yii::$app->cache->get('productId') . '_' . rand(1, 99) . '.' . $file->extension;
