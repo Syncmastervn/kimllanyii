@@ -7,8 +7,8 @@ USE yiishop;
 CREATE TABLE authority 
 (
     Id          INT UNSIGNED    NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Name        CHAR(50)        NOT NULL,
-    Description CHAR(200)       DEFAULT NULL,
+    Name        VARCHAR(50)        NOT NULL,
+    Description VARCHAR(200)       DEFAULT NULL,
     Rank        TINYINT(1)      DEFAULT 1,
 	Status		TINYINT(1) 		DEFAULT 1
 );
@@ -20,16 +20,16 @@ CREATE TABLE user
 (
     Id          INT UNSIGNED    NOT NULL AUTO_INCREMENT PRIMARY KEY,
     AuthId      INT UNSIGNED    NOT NULL,
-    UserName    CHAR(50)        NOT NULL,
-	Phone		CHAR(20)		DEFAULT NULL,
-    Password    CHAR(200)       NOT NULL,
-	FullName	CHAR(100)		NOT NULL,
-	Address 	CHAR(200)		DEFAULT NULL,
+    UserName    VARCHAR(50)        NOT NULL,
+	Phone		VARCHAR(20)		DEFAULT NULL,
+    Password    VARCHAR(200)    NOT NULL,
+	FullName	VARCHAR(100)	NOT NULL,
+	Address 	VARCHAR(200)	DEFAULT NULL,
 	CitizenId	CHAR(100)		NOT NULL,
-	Email		CHAR(100)		DEFAULT NULL,
-	SocialNet	CHAR(100)		DEFAULT NULL,
-	Images		CHAR(150)		DEFAULT NULL,
-	Notes		CHAR(100)		DEFAULT NULL,
+	Email		VARCHAR(100)	DEFAULT NULL,
+	SocialNet	VARCHAR(100)	DEFAULT NULL,
+	Images		VARCHAR(150)	DEFAULT NULL,
+	Notes		VARCHAR(100)	DEFAULT NULL,
 	Rank		TINYINT(1)		DEFAULT NULL,
     Status      TINYINT(1)      DEFAULT 1,
     Date        TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -42,9 +42,9 @@ VALUES (1,'admin','123456','Quan tri vien','00000000');
 CREATE TABLE category 
 (
     Id          INT UNSIGNED    NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    Name        CHAR(50)        NOT NULL,
+    Name        VARCHAR(50)        NOT NULL,
 	Price		INT UNSIGNED	NOT NULL,
-    Description CHAR(150)       DEFAULT NULL,
+    Description VARCHAR(150)       DEFAULT NULL,
     Date        TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
     Status      TINYINT(1)
 );
@@ -56,7 +56,7 @@ CREATE TABLE category_history
 	Price 		INT UNSIGNED 	NOT NULL,
 	Date 		TIMESTAMP 		NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	UserId		INT UNSIGNED 	NOT NULL,
-	Notes		CHAR(50)		DEFAULT NULL,
+	Notes		VARCHAR(50)		DEFAULT NULL,
 	FOREIGN KEY (CategoryId) REFERENCES category (Id),
 	FOREIGN KEY (UserId)	REFERENCES user (Id)
 );
@@ -64,8 +64,8 @@ CREATE TABLE category_history
 CREATE TABLE product_group
 (
 	Id 			INT UNSIGNED	NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	Name		CHAR(80)		NOT NULL,
-	Note		CHAR(250)		NOT NULL,
+	Name		VARCHAR(80)		NOT NULL,
+	Note		VARCHAR(250)		NOT NULL,
 	Rank 		TINYINT			DEFAULT 1,
 	Status		TINYINT			DEFAULT 1
 );
@@ -73,19 +73,19 @@ CREATE TABLE product_group
 CREATE TABLE product
 (
     Id          INT UNSIGNED    NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-    Name        CHAR(150)       NOT NULL,
+    Name        VARCHAR(150)       NOT NULL,
     CategoryId  INT UNSIGNED    NOT NULL,
     Price       INT UNSIGNED    DEFAULT NULL,
     Discount    INT UNSIGNED    DEFAULT NULL,
     PriceExtra  INT UNSIGNED    DEFAULT NULL,
-    Images      CHAR(100)       DEFAULT NULL,
+    Images      VARCHAR(100)       DEFAULT NULL,
 	GroupId		INT UNSIGNED	NOT NULL,
     Date        TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
     DateUpdate  TIMESTAMP       NULL DEFAULT NULL,
     Rank        TINYINT      	DEFAULT 0,
     UserId      INT UNSIGNED    NOT NULL,
 	Description	TEXT			DEFAULT NULL,
-	Tags		CHAR(150)		DEFAULT NULL,
+	Tags		VARCHAR(150)		DEFAULT NULL,
 	Interaction INT UNSIGNED	DEFAULT NULL,
     Status      TINYINT(1)      DEFAULT 1,
     FOREIGN KEY (CategoryId) REFERENCES category (Id) ON DELETE CASCADE,
@@ -97,7 +97,7 @@ CREATE TABLE pictures
 (
 	Id 			INT UNSIGNED 	NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	ProductId	INT UNSIGNED	DEFAULT 0,
-	Image 		CHAR(100)		NOT NULL,
+	Image 		VARCHAR(100)		NOT NULL,
 	Date		TIMESTAMP 		NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	FOREIGN KEY (ProductId) REFERENCES product (Id)
 );
@@ -116,7 +116,13 @@ CREATE TABLE cart
 	INDEX (UserId)
 );
 
-CREATE TABLE saving
+/* *******************************************************************	
+	Chưa tạo Cart_details để tạo list các sản phẩm trong cart
+	Chưa tạo Notifications để thông báo các thông tin cho khách hàng
+	Chưa tạo Bill và Bill_details để khách hàng đặt hàng
+ */
+
+CREATE TABLE saving # Khách hàng gửi vàng
 (
 	Id 			INT UNSIGNED 	NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	Code		VARCHAR(50)		NOT NULL UNIQUE,
@@ -157,9 +163,9 @@ CREATE TABLE ledger
 	CartId		INT	UNSIGNED 	DEFAULT NULL,
     UserId      INT UNSIGNED    NOT NULL,
 	Date        TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	Actions		CHAR(50)		DEFAULT NULL,
+	Actions		VARCHAR(50)		DEFAULT NULL,
     Content     TEXT            NOT NULL,
-    Content2    CHAR(150)       DEFAULT NULL,
+    Content2    VARCHAR(150)    DEFAULT NULL,
     Status      TINYINT(1)      DEFAULT 1,
     FOREIGN KEY (UserId) REFERENCES user (Id) ON DELETE CASCADE,
     INDEX (UserId)
@@ -168,7 +174,7 @@ CREATE TABLE ledger
 CREATE TABLE posts
 (
 	Id			INT UNSIGNED	NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	Title		CHAR(100) 		NOT NULL,
+	Title		VARCHAR(100) 	NOT NULL,
 	Content		TEXT			NOT NULL,
 	UserId		INT UNSIGNED 	NOT NULL,
 	Date		TIMESTAMP		NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -180,7 +186,7 @@ CREATE TABLE posts_images
 (
 	Id 			INT UNSIGNED 	NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	PostsId		INT UNSIGNED	DEFAULT 0,
-	Image 		CHAR(100)		NOT NULL,
+	Image 		VARCHAR(100)	NOT NULL,
 	Date		TIMESTAMP 		NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	FOREIGN KEY (PostsId	) REFERENCES posts (Id)
 );
@@ -188,9 +194,9 @@ CREATE TABLE posts_images
 CREATE TABLE banner
 (
 	Id		INT UNSIGNED 		NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	Title	CHAR(100)			NOT NULL,
+	Title	VARCHAR(100)		NOT NULL,
 	Content	TEXT				NOT NULL,
-	Images	CHAR(100)			DEFAULT NULL,
+	Images	VARCHAR(100)		DEFAULT NULL,
 	UserId	INT UNSIGNED		NOT NULL,
 	Status 	TINYINT(1) 			DEFAULT 1,
 	Date	TIMESTAMP 			NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -201,7 +207,7 @@ CREATE TABLE banner_images
 (
 	Id 			INT UNSIGNED 	NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	BannerId	INT UNSIGNED	DEFAULT 0,
-	Image 		CHAR(100)		NOT NULL,
+	Image 		VARCHAR(100)	NOT NULL,
 	Date		TIMESTAMP 		NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	FOREIGN KEY (BannerId) REFERENCES banner (Id)
 );

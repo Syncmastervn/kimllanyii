@@ -58,7 +58,8 @@ class Pictures extends \yii\db\ActiveRecord
         if ($this->Image && $this->validate()) {
             foreach ($this->Image as $file) {
                 //$name = $file->baseName . 'ID' . Yii::$app->cache->get('productId') . '_' . rand(1, 99) . '.' . $file->extension;
-                $name = 'ID' . Yii::$app->cache->get('productId') . '_' . rand(1, 999) . '.' . $file->extension;
+                //$name = 'ID' . Yii::$app->cache->get('productId') . '_' . rand(1, 999) . '.' . $file->extension;
+                $name = $file->baseName . '_' . 'ID' . Yii::$app->cache->get('productId') . '_' . rand(1, 99) . '.' . $file->extension;
                 $smodel = new Picture();
                 $smodel->ProductId = Yii::$app->cache->get('productId');
                 $smodel->Image = $name;
