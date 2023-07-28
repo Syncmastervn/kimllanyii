@@ -27,6 +27,12 @@
                                 <div class="mb-4">
                                     <?= $form->field($upload, 'Image[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
                                 </div>
+                                <div class="mb-4">
+                                    <?= $form->field($upload, 'Image[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+                                </div>
+                                <div class="mb-4">
+                                    <?= $form->field($upload, 'Image[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+                                </div>
                                 
                                 <div class="mb-4">
 

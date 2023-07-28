@@ -54,12 +54,12 @@ class Pictures extends \yii\db\ActiveRecord
 
     public function upload()
     {
+        $i = 0;
         $path = dirname(__FILE__) . '/../../frontend/web/imgs/shop/';
         if ($this->Image && $this->validate()) {
             foreach ($this->Image as $file) {
-                //$name = $file->baseName . 'ID' . Yii::$app->cache->get('productId') . '_' . rand(1, 99) . '.' . $file->extension;
-                //$name = 'ID' . Yii::$app->cache->get('productId') . '_' . rand(1, 999) . '.' . $file->extension;
-                $name = $file->baseName . '_' . 'ID' . Yii::$app->cache->get('productId') . '_' . rand(1, 99) . '.' . $file->extension;
+                //$name = 'ID' . Yii::$app->cache->get('productId') . '_' . $file->baseName . rand(1, 99) . '_' . $names[$i] . '.' . $file->extension;
+                $name = 'ID' . Yii::$app->cache->get('productId') . '_' . $i++ . '_'  . '.' . $file->extension;
                 $smodel = new Picture();
                 $smodel->ProductId = Yii::$app->cache->get('productId');
                 $smodel->Image = $name;

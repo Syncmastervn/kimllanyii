@@ -164,8 +164,8 @@ class SiteController extends Controller
             $record->save();
             $recordId = $record->Id; //Lấy Id của record vừa lưu trong CSDL
             //Set to cache 
-            Yii::$app->cache->set('productName',$record->Name,300);
-            Yii::$app->cache->set('productId',$recordId,300);
+            Yii::$app->cache->set('productName',$record->Name,180);
+            Yii::$app->cache->set('productId',$recordId,180);
 
             $model = new Pictures();
             $model->ProductId = $recordId;
