@@ -47,13 +47,13 @@ return [
         'db' => [
           'charset'=>'utf8'  
         ],
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],*/
+        // Thay đổi PrettyUrl khu vực này bằng cách disable hoặc enable
+        // 'urlManager' => [
+        //     'enablePrettyUrl' => true,
+        //     'showScriptName' => false,
+        //     'rules' => [
+        //     ],
+        // ],
         
     ],
     'params' => [

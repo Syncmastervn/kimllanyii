@@ -31365,3 +31365,538 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1689843606.322
     'REQUEST_TIME' => 1689843606
 ]
+2023-07-28 08:47:03 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "shop-product-right.html". in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('shop-product-ri...', Array)
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2023-07-28 08:47:03 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][info][application] $_COOKIE = [
+    'advanced-backend' => '2gg20j7euksm4a8q7r5q9nq6t2'
+    '_csrf-backend' => '809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi\";}'
+    '_csrf-frontend' => '835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => 1
+    'user_status' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/kimlanyii/frontend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=2gg20j7euksm4a8q7r5q9nq6t2; _csrf-backend=809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi%22%3B%7D; _csrf-frontend=835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/frontend/web/index.php'
+    'REMOTE_PORT' => '50786'
+    'REDIRECT_URL' => '/kimlanyii/frontend/web/shop-product-right.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kimlanyii/frontend/web/shop-product-right.html'
+    'SCRIPT_NAME' => '/kimlanyii/frontend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1690534023.155
+    'REQUEST_TIME' => 1690534023
+]
+2023-07-28 08:49:32 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/plugins/jquery.syotimer.min.js.map". in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('js/plugins/jque...', Array)
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2023-07-28 08:49:32 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][info][application] $_COOKIE = [
+    'advanced-backend' => '2gg20j7euksm4a8q7r5q9nq6t2'
+    '_csrf-backend' => '809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi\";}'
+    '_csrf-frontend' => '835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => 1
+    'user_status' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=2gg20j7euksm4a8q7r5q9nq6t2; _csrf-backend=809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi%22%3B%7D; _csrf-frontend=835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/frontend/web/index.php'
+    'REMOTE_PORT' => '50879'
+    'REDIRECT_URL' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'SCRIPT_NAME' => '/kimlanyii/frontend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1690534172.699
+    'REQUEST_TIME' => 1690534172
+]
+2023-07-28 08:50:13 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/plugins/jquery.syotimer.min.js.map". in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('js/plugins/jque...', Array)
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2023-07-28 08:50:13 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][info][application] $_COOKIE = [
+    'advanced-backend' => '2gg20j7euksm4a8q7r5q9nq6t2'
+    '_csrf-backend' => '809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi\";}'
+    '_csrf-frontend' => '835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => 1
+    'user_status' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=2gg20j7euksm4a8q7r5q9nq6t2; _csrf-backend=809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi%22%3B%7D; _csrf-frontend=835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/frontend/web/index.php'
+    'REMOTE_PORT' => '50926'
+    'REDIRECT_URL' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'SCRIPT_NAME' => '/kimlanyii/frontend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1690534212.996
+    'REQUEST_TIME' => 1690534212
+]
+2023-07-28 08:50:47 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/plugins/jquery.syotimer.min.js.map". in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('js/plugins/jque...', Array)
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2023-07-28 08:50:47 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][info][application] $_COOKIE = [
+    'advanced-backend' => '2gg20j7euksm4a8q7r5q9nq6t2'
+    '_csrf-backend' => '809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi\";}'
+    '_csrf-frontend' => '835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => 1
+    'user_status' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=2gg20j7euksm4a8q7r5q9nq6t2; _csrf-backend=809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi%22%3B%7D; _csrf-frontend=835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/frontend/web/index.php'
+    'REMOTE_PORT' => '50971'
+    'REDIRECT_URL' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'SCRIPT_NAME' => '/kimlanyii/frontend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1690534247.6
+    'REQUEST_TIME' => 1690534247
+]
+2023-07-28 09:24:04 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/plugins/jquery.syotimer.min.js.map". in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('js/plugins/jque...', Array)
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2023-07-28 09:24:04 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][info][application] $_COOKIE = [
+    'advanced-backend' => '2gg20j7euksm4a8q7r5q9nq6t2'
+    '_csrf-backend' => '809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi\";}'
+    '_csrf-frontend' => '835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => 1
+    'user_status' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=2gg20j7euksm4a8q7r5q9nq6t2; _csrf-backend=809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi%22%3B%7D; _csrf-frontend=835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/frontend/web/index.php'
+    'REMOTE_PORT' => '53566'
+    'REDIRECT_URL' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'SCRIPT_NAME' => '/kimlanyii/frontend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1690536244.142
+    'REQUEST_TIME' => 1690536244
+]
+2023-07-28 09:26:03 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/plugins/jquery.syotimer.min.js.map". in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('js/plugins/jque...', Array)
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2023-07-28 09:26:03 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][info][application] $_COOKIE = [
+    'advanced-backend' => '2gg20j7euksm4a8q7r5q9nq6t2'
+    '_csrf-backend' => '809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi\";}'
+    '_csrf-frontend' => '835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => 1
+    'user_status' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=2gg20j7euksm4a8q7r5q9nq6t2; _csrf-backend=809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi%22%3B%7D; _csrf-frontend=835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/frontend/web/index.php'
+    'REMOTE_PORT' => '53638'
+    'REDIRECT_URL' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'SCRIPT_NAME' => '/kimlanyii/frontend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1690536363.092
+    'REQUEST_TIME' => 1690536363
+]
+2023-07-28 09:26:45 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/plugins/jquery.syotimer.min.js.map". in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('js/plugins/jque...', Array)
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2023-07-28 09:26:45 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][info][application] $_COOKIE = [
+    'advanced-backend' => '2gg20j7euksm4a8q7r5q9nq6t2'
+    '_csrf-backend' => '809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi\";}'
+    '_csrf-frontend' => '835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => 1
+    'user_status' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=2gg20j7euksm4a8q7r5q9nq6t2; _csrf-backend=809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi%22%3B%7D; _csrf-frontend=835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/frontend/web/index.php'
+    'REMOTE_PORT' => '53695'
+    'REDIRECT_URL' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'SCRIPT_NAME' => '/kimlanyii/frontend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1690536405.714
+    'REQUEST_TIME' => 1690536405
+]
+2023-07-28 09:41:52 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "js/plugins/jquery.syotimer.min.js.map". in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('js/plugins/jque...', Array)
+#1 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\kimlanyii\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\kimlanyii\frontend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2023-07-28 09:41:52 [::1][-][2gg20j7euksm4a8q7r5q9nq6t2][info][application] $_COOKIE = [
+    'advanced-backend' => '2gg20j7euksm4a8q7r5q9nq6t2'
+    '_csrf-backend' => '809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi\";}'
+    '_csrf-frontend' => '835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'user_id' => 1
+    'user_status' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,en-US;q=0.9,fr-FR;q=0.8,fr;q=0.7,vi;q=0.6'
+    'HTTP_COOKIE' => 'advanced-backend=2gg20j7euksm4a8q7r5q9nq6t2; _csrf-backend=809ebf217291d0e897acd23f4e6abaa79e495c674630d26c2c4b891e5e8b4bf6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cmSe3yLtVsxxK-XuxM40A5CpL-5rZrNi%22%3B%7D; _csrf-frontend=835b61ca011a9e5a71e272921720ba2a42bf1cf5b62ecfffe29ed33991091bb1a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Gjm2cKHZ3_MoPDFDsZ5AigYkp3qWnr0R%22%3B%7D'
+    'PATH' => 'C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\wamp64\\bin\\php\\php7.0.10;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win64) PHP/7.0.10 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win64) PHP/7.0.10'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/kimlanyii/frontend/web/index.php'
+    'REMOTE_PORT' => '56511'
+    'REDIRECT_URL' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/kimlanyii/frontend/web/js/plugins/jquery.syotimer.min.js.map'
+    'SCRIPT_NAME' => '/kimlanyii/frontend/web/index.php'
+    'PHP_SELF' => '/kimlanyii/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1690537312.142
+    'REQUEST_TIME' => 1690537312
+]
