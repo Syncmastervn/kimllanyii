@@ -48,6 +48,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        //#############################################################
         //Thay đổi PrettyUrl bằng cách disable hoặc enable khu vực này
         // 'urlManager' => [
         //     'enablePrettyUrl' => true,

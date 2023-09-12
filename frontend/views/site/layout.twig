@@ -5,6 +5,7 @@
 {% block asset %}
 {% endblock %}
 
+
 {{ this.beginPage() }}
 
 
@@ -12,16 +13,15 @@
     {{ this.beginBody() }}
 
         {% block header %}
-            {# include "@layouts/components/header.twig" #}
+
         {% endblock %}
 
         {% block content %}
-
+ 
         {% endblock %}
 
         {% block footer %}
             {# include "@layouts/components/footer.twig" #}
-            <!-- <link rel="stylesheet" type="text/css" href="{{ alias_web }}/assets/d0d08a08/jquery.js" /> -->
         {% endblock %}
 
     {{ this.endBody() }}

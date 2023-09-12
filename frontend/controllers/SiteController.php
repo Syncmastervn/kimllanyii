@@ -19,6 +19,9 @@ use frontend\models\UploadImageForm;
 use yii\web\UploadedFile;
 use frontend\models\Invoice;
 use frontend\models\BehaviModel;
+use frontend\models\Product;
+use frontend\models\SearchModel;
+use frontend\models\ProductGroup;
 
 //Json
 use yii\helpers\Json;
@@ -101,7 +104,53 @@ class SiteController extends Controller
     
     public function actionIndex()
     {
-        return $this->render('index');
+        $product = Product::find()->all();
+        $group = ProductGroup::find()->all();
+        return $this->render('index',['product'=>$product,'group'=>$group]);
+    }
+
+    public function actionTest()
+    {
+        $product = Product::find()->all();
+        $group = ProductGroup::find()->all();
+        $groupId = array_map(function($data) {
+            return $data['Id'];
+        }, $group);
+        $tab = ['one','two','three'];
+        $tab_one = $tab_true = $tab_three = null ;
+        $productFilter = ['one','two'];
+
+        $tab_one = Product::find()
+                ->where(['GroupId'=>$groupId[0]])
+                ->all();
+
+        $tab_two = Product::find()
+                ->where(['GroupId'=>$groupId[1]])
+                ->all();
+
+        $tab_three = Product::find()
+                ->where(['GroupId'=>$groupId[2]])
+                ->all();
+
+        $searchModel = new SearchModel();
+        $request = Yii::$app->request;
+        if($searchModel->load(Yii::$app->request->post()))
+        {
+            if($request->post('SearchModel')['search'] == 'kimlan')
+            {
+                $this->redirect(['site/product']);
+            } else
+            {
+                //Lấy tất cả Id trong group và thêm vào $groupId
+                return $this->render('index.twig',['searchModel' => $searchModel, 'alias_web'=>Yii::getAlias('@web'),'groups'=>$group,'products'=>$product,'tabs'=>$tab,'groupId'=>$groupId,'tab_one'=>$tab_one,'tab_two'=>$tab_two,'tab_three'=>$tab_three]);
+            }
+        }else
+        {
+            //Lấy tất cả Id trong group và thêm vào $groupId
+            return $this->render('index.twig',['searchModel' => $searchModel, 'alias_web'=>Yii::getAlias('@web'),'groups'=>$group,'products'=>$product,'tabs'=>$tab,'groupId'=>$groupId,'tab_one'=>$tab_one,'tab_two'=>$tab_two,'tab_three'=>$tab_three]);
+        }
+
+        
     }
 
     public function actionChart(){
@@ -314,9 +363,9 @@ class SiteController extends Controller
         return $this->render('jactive');
     }
     
-    public function actionTest(){
-        return $this->render('test',['link'=>$this->mybehavior->uploadFolder() . 'trungkien.jpg']);
-    }
+    // public function actionTest(){
+    //     return $this->render('test',['link'=>$this->mybehavior->uploadFolder() . 'trungkien.jpg']);
+    // }
     
     public function actionFancybox(){
         return $this->render('fancybox');

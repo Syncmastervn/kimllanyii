@@ -36,30 +36,31 @@ class __TwigTemplate_8dad82649f1a297ccb24f709105d7703e206ae767b8b75dbe2805478aee
         $this->displayBlock('asset', $context, $blocks);
         // line 7
         echo "
+
 ";
-        // line 8
+        // line 9
         echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), ($context["this"] ?? null), "beginPage", array(), "method"), "html", null, true);
         echo "
 
 
 
     ";
-        // line 12
+        // line 13
         echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), ($context["this"] ?? null), "beginBody", array(), "method"), "html", null, true);
         echo "
 
         ";
-        // line 14
+        // line 15
         $this->displayBlock('header', $context, $blocks);
-        // line 17
-        echo "
-        ";
         // line 18
-        $this->displayBlock('content', $context, $blocks);
-        // line 21
         echo "
         ";
+        // line 19
+        $this->displayBlock('content', $context, $blocks);
         // line 22
+        echo "
+        ";
+        // line 23
         $this->displayBlock('footer', $context, $blocks);
         // line 26
         echo "
@@ -79,33 +80,29 @@ class __TwigTemplate_8dad82649f1a297ccb24f709105d7703e206ae767b8b75dbe2805478aee
     {
     }
 
-    // line 14
+    // line 15
     public function block_header($context, array $blocks = array())
     {
-        // line 15
-        echo "            ";
         // line 16
-        echo "        ";
-    }
-
-    // line 18
-    public function block_content($context, array $blocks = array())
-    {
-        // line 19
         echo "
         ";
     }
 
-    // line 22
+    // line 19
+    public function block_content($context, array $blocks = array())
+    {
+        // line 20
+        echo " 
+        ";
+    }
+
+    // line 23
     public function block_footer($context, array $blocks = array())
     {
-        // line 23
-        echo "            ";
         // line 24
-        echo "            <!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
-        echo "/assets/d0d08a08/jquery.js\" /> -->
-        ";
+        echo "            ";
+        // line 25
+        echo "        ";
     }
 
     public function getTemplateName()
@@ -120,7 +117,7 @@ class __TwigTemplate_8dad82649f1a297ccb24f709105d7703e206ae767b8b75dbe2805478aee
 
     public function getDebugInfo()
     {
-        return array (  105 => 24,  103 => 23,  100 => 22,  95 => 19,  92 => 18,  88 => 16,  86 => 15,  83 => 14,  78 => 5,  74 => 30,  68 => 27,  65 => 26,  63 => 22,  60 => 21,  58 => 18,  55 => 17,  53 => 14,  48 => 12,  41 => 8,  38 => 7,  36 => 5,  31 => 3,  27 => 2,  23 => 1,);
+        return array (  105 => 25,  103 => 24,  100 => 23,  95 => 20,  92 => 19,  87 => 16,  84 => 15,  79 => 5,  75 => 30,  69 => 27,  66 => 26,  64 => 23,  61 => 22,  59 => 19,  56 => 18,  54 => 15,  49 => 13,  42 => 9,  38 => 7,  36 => 5,  31 => 3,  27 => 2,  23 => 1,);
     }
 
     public function getSourceContext()
