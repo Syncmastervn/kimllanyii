@@ -462,10 +462,17 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
             </div>
             <div class=\"mobile-header-content-area\">
                 <div class=\"mobile-search search-style-3 mobile-header-border\">
-                    <form action=\"#\">
-                        <input type=\"text\" placeholder=\"Search for items…\">
-                        <button type=\"submit\"><i class=\"fi-rs-search\"></i></button>
-                    </form>
+                    ";
+        // line 423
+        $context["form"] = $this->env->getExtension('yii\twig\Extension')->beginWidget("active_form");
+        // line 424
+        echo "                                <input name=\"SearchModel[search]\" type=\"text\" value=\"";
+        echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), ($context["searchModel"] ?? null), "search", array()), "html", null, true);
+        echo "\" placeholder=\"Search for items...\">
+                            ";
+        // line 425
+        $this->env->getExtension('yii\twig\Extension')->endWidget("active_form");
+        echo "
                 </div>
                 <div class=\"mobile-menu-wrap mobile-header-border\">
                     <div class=\"main-categori-wrap mobile-header-border\">
@@ -598,11 +605,7 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                 </div>
                 <div class=\"mobile-social-icon\">
                     <h5 class=\"mb-15 text-grey-4\">Follow Us</h5>
-                    <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-facebook.svg\" alt=\"\"></a>
-                    <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-twitter.svg\" alt=\"\"></a>
-                    <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-instagram.svg\" alt=\"\"></a>
-                    <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-pinterest.svg\" alt=\"\"></a>
-                    <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-youtube.svg\" alt=\"\"></a>
+                    <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-facebook.svg\" alt=\"\">Facebook KIMLAN</a>
                 </div>
             </div>
         </div>
@@ -626,7 +629,10 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                             </div>
                             <div class=\"col-lg-7 col-md-6\">
                                 <div class=\"single-slider-img single-slider-img-1\">
-                                    <img class=\"animated slider-1-1\" src=\"../web/imgs/slider/slider-1B.png\" alt=\"\">
+                                    <img class=\"animated slider-1-1\" src=\"";
+        // line 582
+        echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
+        echo "/imgs/slider/slider-1B.png\" alt=\"\">
                                 </div>
                             </div>
                         </div>
@@ -682,15 +688,15 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                 <div class=\"tab-header\">
                     <ul class=\"nav nav-tabs\" id=\"myTab\" role=\"tablist\">
                         ";
-        // line 642
+        // line 637
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["groups"] ?? null));
         foreach ($context['_seq'] as $context["index"] => $context["record"]) {
-            // line 643
+            // line 638
             echo "
                             <li class=\"nav-item\" role=\"presentation\">
                                 <button class=\"nav-link ";
-            // line 645
+            // line 640
             echo ((($context["index"] == 0)) ? ("active") : (""));
             echo "\" id=\"nav-tab-";
             echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), ($context["tabs"] ?? null), $context["index"], array(), "array"), "html", null, true);
@@ -710,7 +716,7 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['index'], $context['record'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 649
+        // line 644
         echo "                    </ul>
                     <a href=\"#\" class=\"view-more d-none d-md-flex\">View More<i class=\"fi-rs-angle-double-small-right\"></i></a>
                 </div>
@@ -726,26 +732,44 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
 
                         <div class=\"row product-grid-4\">
                             ";
-        // line 663
+        // line 658
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["tab_one"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 664
+            // line 659
             echo "                                    
                                         <div class=\"col-lg-3 col-md-4 col-12 col-sm-6\">
                                             <div class=\"product-cart-wrap mb-30\">
                                                 <div class=\"product-img-action-wrap\">
+                                                
                                                     <div class=\"product-img product-img-zoom\">
                                                         <a href=\"shop-product-right.html\">
-                                                            <img class=\"default-img\" src=\"";
-            // line 670
-            echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
-            echo "/imgs/shop/ID7_1.png\" alt=\"\">
-                                                            <img class=\"hover-img\" src=\"";
+                                                            ";
+            // line 666
+            $context["fileArray"] = twig_split_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Images", array()), ";");
+            // line 667
+            echo "                                                            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(($context["fileArray"] ?? null));
+            foreach ($context['_seq'] as $context["index"] => $context["file"]) {
+                // line 668
+                echo "                                                                ";
+                $context["imgClass"] = ((($context["index"] == 1)) ? ("hover-img") : ("default-img"));
+                // line 669
+                echo "                                                                <img class=\"";
+                echo twig_escape_filter($this->env, ($context["imgClass"] ?? null), "html", null, true);
+                echo "\" src=\"";
+                echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
+                echo "/imgs/shop/";
+                echo twig_escape_filter($this->env, $context["file"], "html", null, true);
+                echo "\" alt=\"\">
+                                                            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['index'], $context['file'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
             // line 671
-            echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
-            echo "/imgs/shop/ID7_2.png\" alt=\"\">
-                                                        </a>
+            echo "                                                        </a>
                                                     </div>
                                                     
                                                     <div class=\"product-badges product-badges-position product-badges-mrg\">
@@ -757,12 +781,12 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                                                         <a href=\"shop-grid-right.html\">Vàng 18k</a>
                                                     </div>
                                                     <h2><a href=\"shop-product-right.html\">";
-            // line 683
+            // line 682
             echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Name", array()), "html", null, true);
             echo "</a></h2>
                                                     <div class=\"product-price\">
                                                         <span>";
-            // line 685
+            // line 684
             echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Price", array()), "html", null, true);
             echo "</span>
                                                     </div>
@@ -777,7 +801,7 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 694
+        // line 693
         echo "                        </div>
 
                     </div>
@@ -787,11 +811,11 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
 
                         <div class=\"row product-grid-4\">
                             ";
-        // line 702
+        // line 701
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["tab_two"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 703
+            // line 702
             echo "                                    
                                         <div class=\"col-lg-3 col-md-4 col-12 col-sm-6\">
                                             <div class=\"product-cart-wrap mb-30\">
@@ -799,11 +823,11 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                                                     <div class=\"product-img product-img-zoom\">
                                                         <a href=\"shop-product-right.html\">
                                                             <img class=\"default-img\" src=\"";
-            // line 709
+            // line 708
             echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
             echo "/imgs/shop/ID1_1_.jpg\" alt=\"\">
                                                             <img class=\"hover-img\" src=\"";
-            // line 710
+            // line 709
             echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
             echo "/imgs/shop/ID1_2_.jpg\" alt=\"\">
                                                         </a>
@@ -818,12 +842,12 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                                                         <a href=\"shop-grid-right.html\">Vàng 18k</a>
                                                     </div>
                                                     <h2><a href=\"shop-product-right.html\">";
-            // line 722
+            // line 721
             echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Name", array()), "html", null, true);
             echo "</a></h2>
                                                     <div class=\"product-price\">
                                                         <span>";
-            // line 724
+            // line 723
             echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Price", array()), "html", null, true);
             echo "</span>
                                                     </div>
@@ -838,7 +862,7 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 733
+        // line 732
         echo "                        </div>
 
                     </div>
@@ -847,26 +871,43 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
 
                         <div class=\"row product-grid-4\">
                             ";
-        // line 740
+        // line 739
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["tab_three"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 741
+            // line 740
             echo "                                    
                                         <div class=\"col-lg-3 col-md-4 col-12 col-sm-6\">
                                             <div class=\"product-cart-wrap mb-30\">
                                                 <div class=\"product-img-action-wrap\">
                                                     <div class=\"product-img product-img-zoom\">
                                                         <a href=\"shop-product-right.html\">
-                                                            <img class=\"default-img\" src=\"";
+                                                            ";
+            // line 746
+            $context["fileArray"] = twig_split_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Images", array()), ";");
             // line 747
-            echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
-            echo "/imgs/shop/ID1_1_.jpg\" alt=\"\">
-                                                            <img class=\"hover-img\" src=\"";
-            // line 748
-            echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
-            echo "/imgs/shop/ID1_2_.jpg\" alt=\"\">
-                                                        </a>
+            echo "                                                            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(($context["fileArray"] ?? null));
+            foreach ($context['_seq'] as $context["index"] => $context["file"]) {
+                // line 748
+                echo "                                                                ";
+                $context["imgClass"] = ((($context["index"] == 1)) ? ("hover-img") : ("default-img"));
+                // line 749
+                echo "                                                                <img class=\"";
+                echo twig_escape_filter($this->env, ($context["imgClass"] ?? null), "html", null, true);
+                echo "\" src=\"";
+                echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
+                echo "/imgs/shop/";
+                echo twig_escape_filter($this->env, $context["file"], "html", null, true);
+                echo "\" alt=\"\">
+                                                            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['index'], $context['file'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 751
+            echo "                                                        </a>
                                                     </div>
                                                     
                                                     <div class=\"product-badges product-badges-position product-badges-mrg\">
@@ -878,12 +919,12 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                                                         <a href=\"shop-grid-right.html\">Vàng 18k</a>
                                                     </div>
                                                     <h2><a href=\"shop-product-right.html\">";
-            // line 760
+            // line 762
             echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Name", array()), "html", null, true);
             echo "</a></h2>
                                                     <div class=\"product-price\">
                                                         <span>";
-            // line 762
+            // line 764
             echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Price", array()), "html", null, true);
             echo "</span>
                                                     </div>
@@ -898,7 +939,7 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 771
+        // line 773
         echo "                        </div>
 
                     </div>
@@ -1544,57 +1585,42 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                             <div class=\"logo logo-width-1 wow fadeIn animated\">
                                 <a href=\"index.html\"><img src=\"../web/imgs/theme/logo.svg\" alt=\"logo\"></a>
                             </div>
-                            <h5 class=\"mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated\">Contact</h5>
+                            <h5 class=\"mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated\">Liên hệ chúng tôi</h5>
                             <p class=\"wow fadeIn animated\">
-                                <strong>Address: </strong>562 Wellington Road, Street 32, San Francisco
+                                <strong>Địa chỉ: </strong>số 48 & 49 Lý Tự Trọng, phường An Lộc, thị xã Bình Long, tỉnh Bình Phước
                             </p>
                             <p class=\"wow fadeIn animated\">
-                                <strong>Phone: </strong>+01 2222 365 /(+91) 01 2345 6789
+                                <strong>Điện thoại liên lạc: </strong>0918424696 (Bộ phận thiết kế)
                             </p>
                             <p class=\"wow fadeIn animated\">
-                                <strong>Hours: </strong>10:00 - 18:00, Mon - Sat
+                                <strong>Giờ làm việc: </strong>7:00 sáng - 18:40 (từ thứ hai đến chủ nhật)
                             </p>
-                            <h5 class=\"mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated\">Follow Us</h5>
+                            <h5 class=\"mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated\">FACEBOOK</h5>
                             <div class=\"mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0\">
-                                <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-facebook.svg\" alt=\"\"></a>
-                                <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-twitter.svg\" alt=\"\"></a>
-                                <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-instagram.svg\" alt=\"\"></a>
-                                <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-pinterest.svg\" alt=\"\"></a>
-                                <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-youtube.svg\" alt=\"\"></a>
+                                <a href=\"#\"><img src=\"../web/imgs/theme/icons/icon-facebook.svg\" alt=\"\">KIMLAN</a>
                             </div>
                         </div>
                     </div>
                     <div class=\"col-lg-2 col-md-3\">
-                        <h5 class=\"widget-title wow fadeIn animated\">About</h5>
+                        <h5 class=\"widget-title wow fadeIn animated\">Liên kết</h5>
                         <ul class=\"footer-list wow fadeIn animated mb-sm-5 mb-md-0\">
-                            <li><a href=\"#\">About Us</a></li>
-                            <li><a href=\"#\">Delivery Information</a></li>
-                            <li><a href=\"#\">Privacy Policy</a></li>
-                            <li><a href=\"#\">Terms &amp; Conditions</a></li>
-                            <li><a href=\"#\">Contact Us</a></li>
-                            <li><a href=\"#\">Support Center</a></li>
+                            <li><a href=\"#\">Đang hoàn thiện</a></li>
                         </ul>
                     </div>
                     <div class=\"col-lg-2  col-md-3\">
-                        <h5 class=\"widget-title wow fadeIn animated\">My Account</h5>
+                        <h5 class=\"widget-title wow fadeIn animated\">Tài khoản khách hàng</h5>
                         <ul class=\"footer-list wow fadeIn animated\">
-                            <li><a href=\"#\">Sign In</a></li>
-                            <li><a href=\"#\">View Cart</a></li>
-                            <li><a href=\"#\">My Wishlist</a></li>
-                            <li><a href=\"#\">Track My Order</a></li>
-                            <li><a href=\"#\">Help</a></li>
-                            <li><a href=\"#\">Order</a></li>
+                            <li><a href=\"#\">Đang hoàn thiện</a></li>
                         </ul>
                     </div>
                     <div class=\"col-lg-4\">
-                        <h5 class=\"widget-title wow fadeIn animated\">Install App</h5>
+                        <h5 class=\"widget-title wow fadeIn animated\">Phương thức thanh toán!</h5>
                         <div class=\"row\">
                             <div class=\"col-md-8 col-lg-12\">
-                                <p class=\"wow fadeIn animated\">From App Store or Google Play</p>
-                                <div class=\"download-app wow fadeIn animated\">
-                                    <a href=\"#\" class=\"hover-up mb-sm-4 mb-lg-0\"><img class=\"active\" src=\"../web/imgs/theme/app-store.jpg\" alt=\"\"></a>
-                                    <a href=\"#\" class=\"hover-up\"><img src=\"../web/imgs/theme/google-play.jpg\" alt=\"\"></a>
-                                </div>
+                                <p class=\"wow fadeIn animated\">Chấp nhận thanh toán các loại thẻ tín dụng</p>
+                                <p class=\"wow fadeIn animated\">Có dịch vụ cầm đồ</p>
+                                <p class=\"wow fadeIn animated\">Có dịch vụ rút tiền bằng thẻ tín dụng</p>
+                                
                             </div>
                             <div class=\"col-md-4 col-lg-12 mt-md-3 mt-lg-0\">
                                 <p class=\"mb-20 wow fadeIn animated\">Secured Payment Gateways</p>
@@ -1653,7 +1679,7 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
 
     public function getDebugInfo()
     {
-        return array (  902 => 771,  887 => 762,  882 => 760,  867 => 748,  863 => 747,  855 => 741,  851 => 740,  842 => 733,  827 => 724,  822 => 722,  807 => 710,  803 => 709,  795 => 703,  791 => 702,  781 => 694,  766 => 685,  761 => 683,  746 => 671,  742 => 670,  734 => 664,  730 => 663,  714 => 649,  694 => 645,  690 => 643,  686 => 642,  239 => 198,  234 => 197,  232 => 196,  42 => 8,  39 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  943 => 773,  928 => 764,  923 => 762,  910 => 751,  897 => 749,  894 => 748,  889 => 747,  887 => 746,  879 => 740,  875 => 739,  866 => 732,  851 => 723,  846 => 721,  831 => 709,  827 => 708,  819 => 702,  815 => 701,  805 => 693,  790 => 684,  785 => 682,  772 => 671,  759 => 669,  756 => 668,  751 => 667,  749 => 666,  740 => 659,  736 => 658,  720 => 644,  700 => 640,  696 => 638,  692 => 637,  634 => 582,  474 => 425,  469 => 424,  467 => 423,  239 => 198,  234 => 197,  232 => 196,  42 => 8,  39 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     public function getSourceContext()

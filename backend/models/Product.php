@@ -56,9 +56,9 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             'Id' => 'ID',
-            'Name' => 'Name',
+            'Name' => 'Tên sản phẩm',
             'CategoryId' => 'Category ID',
-            'Price' => 'Price',
+            'Price' => 'Giá',
             'Discount' => 'Discount',
             'PriceExtra' => 'Price Extra',
             'Images' => 'Images',
@@ -67,7 +67,7 @@ class Product extends \yii\db\ActiveRecord
             'DateUpdate' => 'Date Update',
             'Rank' => 'Rank',
             'UserId' => 'User ID',
-            'Description' => 'Description',
+            'Description' => 'Mô tả',
             'Tags' => 'Tags',
             'Interaction' => 'Interaction',
             'Status' => 'Status',

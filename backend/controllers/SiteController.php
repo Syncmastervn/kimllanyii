@@ -22,6 +22,7 @@ use backend\models\Picture;
 use yii\base\Action;
 use yii\base\Security;
 use yii\web\UploadedFile;
+use yii\data\Pagination; // Sử dụng phân trang của Yii 2.0
 
 
 // ok xin mời 
@@ -163,19 +164,96 @@ class SiteController extends Controller
             $record->UserId = 1;
             $record->save();
             $recordId = $record->Id; //Lấy Id của record vừa lưu trong CSDL
+
             //Set to cache 
-            Yii::$app->cache->set('productName',$record->Name,180);
-            Yii::$app->cache->set('productId',$recordId,180);
+            Yii::$app->cache->set('productName',$record->Name,30);
+            Yii::$app->cache->set('productId',$recordId,30);
+            Yii::$app->cache->set('ImageNames','',30);
 
             $model = new Pictures();
             $model->ProductId = $recordId;
             $model->Image = UploadedFile::getInstances($model, 'Image');
+
             $this->redirect(['site/upload_files']);
         }else
         {
             return $this->render('createProduct',['model'=>$model,'category_opt'=>$category_opt,'group_opt'=>$group_opt]);
         }
         
+    }
+
+    public function actionProduct_edit()
+    {
+        $data = Yii::$app->request->get('data');
+        $product = Product::findOne($data);
+        $model = new Product();
+        if($model->load(Yii::$app->request->post()))
+        {
+            $record = Product::findOne($data);
+            $record->Name = Yii::$app->request->post('Product')['Name'];
+            $record->Description = Yii::$app->request->post('Product')['Description'];
+            $record->Price = Yii::$app->request->post('Product')['Price'];
+            $record->save();
+            return $this->render('productEdit',['model'=>$model,'product'=>$record]);
+        }else
+        {
+            return $this->render('productEdit',['model'=>$model,'product'=>$product]);
+        }
+        
+    }
+
+    public function actionProduct_manage()
+    {
+        if(Yii::$app->request->get('TopView') != null)
+        {
+            $product = Product::findOne(Yii::$app->request->get('TopView'));
+            $product->Rank = 2;
+            $product->save();
+        }
+
+        if(Yii::$app->request->get('Edit') != null)
+        {
+            return $this->redirect(['/site/product_edit', 'data' => Yii::$app->request->get('Edit')]);
+        }
+
+        if(Yii::$app->request->get('Reset') != null)
+        {
+            $product = Product::findOne(Yii::$app->request->get('Reset'));
+            $product->Rank = 0;
+            $product->save();
+        }
+
+        if(Yii::$app->request->get('Best') != null)
+        {
+            $product = Product::findOne(Yii::$app->request->get('Best'));
+            $product->Rank = 1;
+            $product->save();
+        }
+
+        if(Yii::$app->request->get('Delete') != null)
+        {
+            echo '<h3> Xóa sản phẩm </h3>';
+        }
+
+        // Số lượng sản phẩm trên mỗi trang
+        $itemsPerPage = 10;
+
+        // Tạo đối tượng Pagination dùng để phân trang có hỗ trợ bởi Yii 2.0
+        $pagination = new Pagination([
+            'defaultPageSize' => 10, // Số lượng mục trên mỗi trang
+            'totalCount' => Product::find()->where(['Status' => 1])->count(), // Tổng số mục
+        ]);
+
+        $TopRankViewProds = Product::find()
+            ->where(['Rank' => 2])
+            ->all();
+        $product = Product::find()
+            ->where(['Status' => 1])
+            ->orderBy(['GroupId' => SORT_ASC])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        return $this->render('productManage',['products'=>$product,'pagination'=>$pagination]);
     }
 
     public function actionUpload_files()

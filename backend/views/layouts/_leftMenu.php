@@ -18,7 +18,7 @@
                 </li>
                 <li class="menu-item has-submenu">
                     <a class="menu-link" href="page-products-list.html"> <i class="icon material-icons md-shopping_bag"></i>
-                        <span class="text">Products</span>
+                        <span class="text">Thông báo</span>
                     </a>
                     <div class="submenu">
                         <a href="page-products-list.html">Product List</a>
@@ -39,12 +39,16 @@
                 </li> -->
                 <li class="menu-item has-submenu">
                     <a class="menu-link" href="page-sellers-cards.html"> <i class="icon material-icons md-store"></i>
-                        <span class="text">Sellers</span>
+                        <span class="text">Quản lý</span>
                     </a>
                     <div class="submenu">
-                        <a href="page-sellers-cards.html">Sellers cards</a>
-                        <a href="page-sellers-list.html">Sellers list</a>
-                        <a href="page-seller-detail.html">Seller profile</a>
+                        <a href="<?= $address_web ?>product_manage">Phân loại sản phẩm</a>
+                        <a href="page-sellers-list.html">Chỉnh sửa sản phẩm</a>
+                        <a href="page-seller-detail.html">Xóa sản phẩm</a>
+                        <a href="page-seller-detail.html">Chỉnh sửa nhóm</a>
+                        <a href="page-seller-detail.html">Khóa nhóm</a>
+                        <a href="page-seller-detail.html">Chỉnh sửa loại sp</a>
+                        <a href="page-seller-detail.html">Xóa loại sp</a>
                     </div>
                 </li>
                 <li class="menu-item has-submenu">

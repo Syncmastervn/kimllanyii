@@ -420,10 +420,9 @@
             </div>
             <div class="mobile-header-content-area">
                 <div class="mobile-search search-style-3 mobile-header-border">
-                    <form action="#">
-                        <input type="text" placeholder="Search for items…">
-                        <button type="submit"><i class="fi-rs-search"></i></button>
-                    </form>
+                    {% set form = active_form_begin() %}
+                                <input name="SearchModel[search]" type="text" value="{{searchModel.search}}" placeholder="Search for items...">
+                            {{ active_form_end() }}
                 </div>
                 <div class="mobile-menu-wrap mobile-header-border">
                     <div class="main-categori-wrap mobile-header-border">
@@ -556,11 +555,7 @@
                 </div>
                 <div class="mobile-social-icon">
                     <h5 class="mb-15 text-grey-4">Follow Us</h5>
-                    <a href="#"><img src="../web/imgs/theme/icons/icon-facebook.svg" alt=""></a>
-                    <a href="#"><img src="../web/imgs/theme/icons/icon-twitter.svg" alt=""></a>
-                    <a href="#"><img src="../web/imgs/theme/icons/icon-instagram.svg" alt=""></a>
-                    <a href="#"><img src="../web/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
-                    <a href="#"><img src="../web/imgs/theme/icons/icon-youtube.svg" alt=""></a>
+                    <a href="#"><img src="../web/imgs/theme/icons/icon-facebook.svg" alt="">Facebook KIMLAN</a>
                 </div>
             </div>
         </div>
@@ -584,7 +579,7 @@
                             </div>
                             <div class="col-lg-7 col-md-6">
                                 <div class="single-slider-img single-slider-img-1">
-                                    <img class="animated slider-1-1" src="../web/imgs/slider/slider-1B.png" alt="">
+                                    <img class="animated slider-1-1" src="{{ alias_web }}/imgs/slider/slider-1B.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -665,10 +660,14 @@
                                         <div class="col-lg-3 col-md-4 col-12 col-sm-6">
                                             <div class="product-cart-wrap mb-30">
                                                 <div class="product-img-action-wrap">
+                                                
                                                     <div class="product-img product-img-zoom">
                                                         <a href="shop-product-right.html">
-                                                            <img class="default-img" src="{{ alias_web }}/imgs/shop/ID7_1.png" alt="">
-                                                            <img class="hover-img" src="{{ alias_web }}/imgs/shop/ID7_2.png" alt="">
+                                                            {% set fileArray = item.Images|split(';') %}
+                                                            {% for index, file in fileArray %}
+                                                                {% set imgClass = (index == 1) ? 'hover-img' : 'default-img' %}
+                                                                <img class="{{ imgClass }}" src="{{ alias_web }}/imgs/shop/{{ file }}" alt="">
+                                                            {% endfor %}
                                                         </a>
                                                     </div>
                                                     
@@ -744,8 +743,11 @@
                                                 <div class="product-img-action-wrap">
                                                     <div class="product-img product-img-zoom">
                                                         <a href="shop-product-right.html">
-                                                            <img class="default-img" src="{{ alias_web }}/imgs/shop/ID1_1_.jpg" alt="">
-                                                            <img class="hover-img" src="{{ alias_web }}/imgs/shop/ID1_2_.jpg" alt="">
+                                                            {% set fileArray = item.Images|split(';') %}
+                                                            {% for index, file in fileArray %}
+                                                                {% set imgClass = (index == 1) ? 'hover-img' : 'default-img' %}
+                                                                <img class="{{ imgClass }}" src="{{ alias_web }}/imgs/shop/{{ file }}" alt="">
+                                                            {% endfor %}
                                                         </a>
                                                     </div>
                                                     
@@ -1413,57 +1415,42 @@
                             <div class="logo logo-width-1 wow fadeIn animated">
                                 <a href="index.html"><img src="../web/imgs/theme/logo.svg" alt="logo"></a>
                             </div>
-                            <h5 class="mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated">Contact</h5>
+                            <h5 class="mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated">Liên hệ chúng tôi</h5>
                             <p class="wow fadeIn animated">
-                                <strong>Address: </strong>562 Wellington Road, Street 32, San Francisco
+                                <strong>Địa chỉ: </strong>số 48 & 49 Lý Tự Trọng, phường An Lộc, thị xã Bình Long, tỉnh Bình Phước
                             </p>
                             <p class="wow fadeIn animated">
-                                <strong>Phone: </strong>+01 2222 365 /(+91) 01 2345 6789
+                                <strong>Điện thoại liên lạc: </strong>0918424696 (Bộ phận thiết kế)
                             </p>
                             <p class="wow fadeIn animated">
-                                <strong>Hours: </strong>10:00 - 18:00, Mon - Sat
+                                <strong>Giờ làm việc: </strong>7:00 sáng - 18:40 (từ thứ hai đến chủ nhật)
                             </p>
-                            <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
+                            <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">FACEBOOK</h5>
                             <div class="mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0">
-                                <a href="#"><img src="../web/imgs/theme/icons/icon-facebook.svg" alt=""></a>
-                                <a href="#"><img src="../web/imgs/theme/icons/icon-twitter.svg" alt=""></a>
-                                <a href="#"><img src="../web/imgs/theme/icons/icon-instagram.svg" alt=""></a>
-                                <a href="#"><img src="../web/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
-                                <a href="#"><img src="../web/imgs/theme/icons/icon-youtube.svg" alt=""></a>
+                                <a href="#"><img src="../web/imgs/theme/icons/icon-facebook.svg" alt="">KIMLAN</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-3">
-                        <h5 class="widget-title wow fadeIn animated">About</h5>
+                        <h5 class="widget-title wow fadeIn animated">Liên kết</h5>
                         <ul class="footer-list wow fadeIn animated mb-sm-5 mb-md-0">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Delivery Information</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">Đang hoàn thiện</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2  col-md-3">
-                        <h5 class="widget-title wow fadeIn animated">My Account</h5>
+                        <h5 class="widget-title wow fadeIn animated">Tài khoản khách hàng</h5>
                         <ul class="footer-list wow fadeIn animated">
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">View Cart</a></li>
-                            <li><a href="#">My Wishlist</a></li>
-                            <li><a href="#">Track My Order</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Order</a></li>
+                            <li><a href="#">Đang hoàn thiện</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4">
-                        <h5 class="widget-title wow fadeIn animated">Install App</h5>
+                        <h5 class="widget-title wow fadeIn animated">Phương thức thanh toán!</h5>
                         <div class="row">
                             <div class="col-md-8 col-lg-12">
-                                <p class="wow fadeIn animated">From App Store or Google Play</p>
-                                <div class="download-app wow fadeIn animated">
-                                    <a href="#" class="hover-up mb-sm-4 mb-lg-0"><img class="active" src="../web/imgs/theme/app-store.jpg" alt=""></a>
-                                    <a href="#" class="hover-up"><img src="../web/imgs/theme/google-play.jpg" alt=""></a>
-                                </div>
+                                <p class="wow fadeIn animated">Chấp nhận thanh toán các loại thẻ tín dụng</p>
+                                <p class="wow fadeIn animated">Có dịch vụ cầm đồ</p>
+                                <p class="wow fadeIn animated">Có dịch vụ rút tiền bằng thẻ tín dụng</p>
+                                
                             </div>
                             <div class="col-md-4 col-lg-12 mt-md-3 mt-lg-0">
                                 <p class="mb-20 wow fadeIn animated">Secured Payment Gateways</p>

@@ -60,6 +60,10 @@ class Pictures extends \yii\db\ActiveRecord
             foreach ($this->Image as $file) {
                 //$name = 'ID' . Yii::$app->cache->get('productId') . '_' . $file->baseName . rand(1, 99) . '_' . $names[$i] . '.' . $file->extension;
                 $name = 'ID' . Yii::$app->cache->get('productId') . '_' . $i++ . '.' . $file->extension;
+                $imageName = $name . ';';
+                $Sql_name = Yii::$app->cache->get('ImageNames');
+                $Sql_name .= $imageName;
+                Yii::$app->cache->set('ImageNames',$Sql_name);
                 $smodel = new Picture();
                 $smodel->ProductId = Yii::$app->cache->get('productId');
                 $smodel->Image = $name;
@@ -67,9 +71,16 @@ class Pictures extends \yii\db\ActiveRecord
                     $file->saveAs($path . $name);
                 }
             }
+
+            $updateImage = Product::findOne(Yii::$app->cache->get('productId'));
+            $updateImage->Images = Yii::$app->cache->get('ImageNames');
+            $updateImage->save();
+
             return true;
         } else {
             return false;
         }
+
+
     }
 }

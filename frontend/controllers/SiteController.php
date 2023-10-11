@@ -102,14 +102,14 @@ class SiteController extends Controller
         return $this->render('datatable');
     }
     
-    public function actionIndex()
-    {
-        $product = Product::find()->all();
-        $group = ProductGroup::find()->all();
-        return $this->render('index',['product'=>$product,'group'=>$group]);
-    }
+    // public function actionIndex()
+    // {
+    //     $product = Product::find()->all();
+    //     $group = ProductGroup::find()->all();
+    //     return $this->render('index',['product'=>$product,'group'=>$group]);
+    // }
 
-    public function actionTest()
+    public function actionIndex()
     {
         $product = Product::find()->all();
         $group = ProductGroup::find()->all();
@@ -132,7 +132,7 @@ class SiteController extends Controller
                 ->where(['GroupId'=>$groupId[2]])
                 ->all();
 
-        $searchModel = new SearchModel();
+        $searchModel = new SearchModel(); //SearchModel được tạo ra bởi mr Nhân
         $request = Yii::$app->request;
         if($searchModel->load(Yii::$app->request->post()))
         {

@@ -70,7 +70,6 @@
         if($session->has('user_id'))
         {
             echo $this->render('_leftMenu',['address_web'=>'http://localhost'.Yii::getAlias('@web').'/index.php?r=site/']);
-
         }
         
     ?>
