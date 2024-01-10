@@ -43,12 +43,7 @@
                     </a>
                     <div class="submenu">
                         <a href="<?= $address_web ?>product_manage">Phân loại sản phẩm</a>
-                        <a href="page-sellers-list.html">Chỉnh sửa sản phẩm</a>
-                        <a href="page-seller-detail.html">Xóa sản phẩm</a>
-                        <a href="page-seller-detail.html">Chỉnh sửa nhóm</a>
-                        <a href="page-seller-detail.html">Khóa nhóm</a>
-                        <a href="page-seller-detail.html">Chỉnh sửa loại sp</a>
-                        <a href="page-seller-detail.html">Xóa loại sp</a>
+                        <a href="page-sellers-list.html">...</a>
                     </div>
                 </li>
                 <li class="menu-item has-submenu">

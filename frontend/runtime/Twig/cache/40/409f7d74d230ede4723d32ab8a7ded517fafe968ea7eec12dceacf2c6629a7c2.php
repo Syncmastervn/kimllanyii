@@ -32,17 +32,13 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
         echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"";
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/css/main.css\" /> 
-    <link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        // line 5
-        echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
-        echo "/css/site.css\" /> 
 ";
     }
 
-    // line 9
+    // line 8
     public function block_content($context, array $blocks = array())
     {
-        // line 10
+        // line 9
         echo "    <div class=\"product-full\">
 <div class=\"modal fade custom-modal\" id=\"quickViewModal\" tabindex=\"-1\" aria-labelledby=\"quickViewModalLabel\" aria-hidden=\"true\">
         <div class=\"modal-dialog\">
@@ -101,7 +97,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                         </div>
                         <div class=\"col-md-6 col-sm-12 col-xs-12\">
                             <div class=\"detail-info\">
-                                <h3 class=\"title-detail mt-30\">Colorful Pattern Shirts HD450</h3>
+                                <h3 class=\"title-detail mt-30\">Sản phẩm liên kết</h3>
                                 <div class=\"product-detail-rating\">
                                     <div class=\"pro-details-brand\">
                                         <span> Brands: <a href=\"shop-grid-right.html\">Bootstrap</a></span>
@@ -220,7 +216,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                 <div class=\"header-wrap\">
                     <div class=\"logo logo-width-1\">
                         <a href=\"index.html\"><img src=\"";
-        // line 186
+        // line 185
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/theme/logo.svg\" alt=\"logo\"></a>
                     </div>
@@ -235,7 +231,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                                 <div class=\"header-action-icon-2\">
                                     <a href=\"shop-wishlist.html\">
                                         <img class=\"svgInject\" alt=\"Evara\" src=\"";
-        // line 198
+        // line 197
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/theme/icons/icon-heart.svg\">
                                         <span class=\"pro-count blue\">4</span>
@@ -244,7 +240,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                                 <div class=\"header-action-icon-2\">
                                     <a class=\"mini-cart-icon\" href=\"shop-cart.html\">
                                         <img alt=\"Evara\" src=\"";
-        // line 204
+        // line 203
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/theme/icons/icon-cart.svg\">
                                         <span class=\"pro-count blue\">2</span>
@@ -254,7 +250,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                                             <li>
                                                 <div class=\"shopping-cart-img\">
                                                     <a href=\"shop-product-right.html\"><img alt=\"Evara\" src=\"";
-        // line 211
+        // line 210
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/thumbnail-3.jpg\"></a>
                                                 </div>
@@ -269,7 +265,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                                             <li>
                                                 <div class=\"shopping-cart-img\">
                                                     <a href=\"shop-product-right.html\"><img alt=\"Evara\" src=\"";
-        // line 223
+        // line 222
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/thumbnail-2.jpg\"></a>
                                                 </div>
@@ -624,27 +620,76 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                     <div class=\"col-lg-12\">
                         <div class=\"product-detail accordion-detail\">
                             <div class=\"row mb-50\">
-                                <div class=\"col-md-6 col-sm-12 col-xs-12\">
+                                <div class=\"col-md-5 col-sm-12 col-xs-12\">
                                     <div class=\"detail-gallery\">
                                         <span class=\"zoom-icon\"><i class=\"fi-rs-search\"></i></span>
                                         <!-- MAIN SLIDES -->
                                         <div class=\"product-image-slider\">
-                                            <figure class=\"border-radius-10\">
-                                                <img src=\"";
+                                            
+                                            ";
+        // line 581
+        $context["fileArray"] = twig_split_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), ($context["product"] ?? null), "Images", array()), ";");
         // line 582
-        echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
-        echo "/imgs/shop/product-1-1-C.jpg\" alt=\"product image\">
-                                            </figure>
+        echo "                                            ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["fileArray"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["file"]) {
+            // line 583
+            echo "
+                                                <figure class=\"border-radius-10\">
+                                                    <img src=\"";
+            // line 585
+            echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
+            echo "/imgs/shop/";
+            echo twig_escape_filter($this->env, $context["file"], "html", null, true);
+            echo "\" alt=\"product image\">
+                                                </figure>
+
+                                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['file'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 589
+        echo "                                                
+                                            
                                             
                                         </div>
                                         <!-- THUMBNAILS -->
-                                        <!-- <div class=\"slider-nav-thumbnails pl-15 pr-15\">
-                                            <div><img src=\"assets/imgs/shop/thumbnail-3.jpg\" alt=\"product image\"></div>
-                                        </div> -->
+                                        <div class=\"slider-nav-thumbnails pl-15 pr-15\">
+                                            ";
+        // line 595
+        $context["fileArray"] = twig_split_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), ($context["product"] ?? null), "Images", array()), ";");
+        // line 596
+        echo "                                            ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["fileArray"] ?? null));
+        foreach ($context['_seq'] as $context["index"] => $context["thumb"]) {
+            // line 597
+            echo "                                                ";
+            if (($context["index"] < 2)) {
+                // line 598
+                echo "                                                    <div><img src=\"";
+                echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
+                echo "/imgs/shop/";
+                echo twig_escape_filter($this->env, $context["thumb"], "html", null, true);
+                echo "\" alt=\"product image\"></div>
+                                                ";
+            }
+            // line 600
+            echo "                                               
+
+                                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['index'], $context['thumb'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 603
+        echo "                                        </div> 
                                     </div>
                                     <!-- End Gallery -->
                                 </div>
-                                <div class=\"col-md-6 col-sm-12 col-xs-12\">
+                                <div class=\"col-md-5 col-sm-12 col-xs-12\">
                                     <div class=\"detail-info\">
                                         <h2 class=\"title-detail\">Colorful Pattern Shirts HD450</h2>
                                         <div class=\"product-detail-rating\">
@@ -743,11 +788,11 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                                                     <div class=\"product-img product-img-zoom\">
                                                         <a href=\"shop-product-right.html\" tabindex=\"0\">
                                                             <img class=\"default-img\" src=\"";
-        // line 691
+        // line 705
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/product-2-1.jpg\" alt=\"\">
                                                             <img class=\"hover-img\" src=\"";
-        // line 692
+        // line 706
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/product-2-2.jpg\" alt=\"\">
                                                         </a>
@@ -781,11 +826,11 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                                                     <div class=\"product-img product-img-zoom\">
                                                         <a href=\"shop-product-right.html\" tabindex=\"0\">
                                                             <img class=\"default-img\" src=\"";
-        // line 723
+        // line 737
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/product-3-1.jpg\" alt=\"\">
                                                             <img class=\"hover-img\" src=\"";
-        // line 724
+        // line 738
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/product-4-2.jpg\" alt=\"\">
                                                         </a>
@@ -819,11 +864,11 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                                                     <div class=\"product-img product-img-zoom\">
                                                         <a href=\"shop-product-right.html\" tabindex=\"0\">
                                                             <img class=\"default-img\" src=\"";
-        // line 755
+        // line 769
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/product-4-1.jpg\" alt=\"\">
                                                             <img class=\"hover-img\" src=\"";
-        // line 756
+        // line 770
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/product-4-2.jpg\" alt=\"\">
                                                         </a>
@@ -857,11 +902,11 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                                                     <div class=\"product-img product-img-zoom\">
                                                         <a href=\"shop-product-right.html\" tabindex=\"0\">
                                                             <img class=\"default-img\" src=\"";
-        // line 787
+        // line 801
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/product-5-1.jpg\" alt=\"\">
                                                             <img class=\"hover-img\" src=\"";
-        // line 788
+        // line 802
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/shop/product-3-2.jpg\" alt=\"\">
                                                         </a>
@@ -894,7 +939,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                             </div>
                             <div class=\"banner-img banner-big wow fadeIn f-none animated mt-50\">
                                 <img class=\"border-radius-10\" src=\"";
-        // line 818
+        // line 832
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/banner/banner-4.png\" alt=\"\">
                                 <div class=\"banner-text\">
@@ -916,7 +961,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                         <div class=\"row align-items-center\">
                             <div class=\"col flex-horizontal-center\">
                                 <img class=\"icon-email\" src=\"";
-        // line 837
+        // line 851
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/theme/icons/icon-email.svg\" alt=\"\">
                                 <h4 class=\"font-size-20 mb-0 ml-3\">Sign up to Newsletter</h4>
@@ -944,7 +989,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                         <div class=\"widget-about font-md mb-md-5 mb-lg-0\">
                             <div class=\"logo logo-width-1 wow fadeIn animated\">
                                 <a href=\"index.html\"><img src=\"";
-        // line 862
+        // line 876
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/theme/logo.svg\" alt=\"logo\"></a>
                             </div>
@@ -961,15 +1006,15 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
                             <h5 class=\"mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated\">Follow Us</h5>
                             <div class=\"mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0\">
                                 <a href=\"#\"><img src=\"";
-        // line 876
+        // line 890
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/theme/icons/icon-facebook.svg\" alt=\"\"></a>
                                 <a href=\"#\"><img src=\"";
-        // line 877
+        // line 891
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/theme/icons/icon-twitter.svg\" alt=\"\"></a>
                                 <a href=\"#\"><img src=\"";
-        // line 878
+        // line 892
         echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
         echo "/imgs/theme/icons/icon-instagram.svg\" alt=\"\"></a>
                                 <a href=\"#\"><img src=\"assets/imgs/theme/icons/icon-pinterest.svg\" alt=\"\"></a>
@@ -1065,7 +1110,7 @@ class __TwigTemplate_53cba9b921553e10dd0c6ff7c2c0a62eb73c9da8e85aa3f9519a529eaca
 
     public function getDebugInfo()
     {
-        return array (  973 => 878,  969 => 877,  965 => 876,  948 => 862,  920 => 837,  898 => 818,  865 => 788,  861 => 787,  827 => 756,  823 => 755,  789 => 724,  785 => 723,  751 => 692,  747 => 691,  635 => 582,  273 => 223,  258 => 211,  248 => 204,  239 => 198,  224 => 186,  46 => 10,  43 => 9,  37 => 5,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  1018 => 892,  1014 => 891,  1010 => 890,  993 => 876,  965 => 851,  943 => 832,  910 => 802,  906 => 801,  872 => 770,  868 => 769,  834 => 738,  830 => 737,  796 => 706,  792 => 705,  688 => 603,  680 => 600,  672 => 598,  669 => 597,  664 => 596,  662 => 595,  654 => 589,  642 => 585,  638 => 583,  633 => 582,  631 => 581,  269 => 222,  254 => 210,  244 => 203,  235 => 197,  220 => 185,  42 => 9,  39 => 8,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     public function getSourceContext()

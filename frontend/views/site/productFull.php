@@ -579,7 +579,12 @@
                                             <figure class="border-radius-10">
                                                 <img src="../web/imgs/shop/product-1-1-C.jpg" alt="product image">
                                             </figure>
-                                            
+                                            <figure class="border-radius-10">
+                                                <img src="../web/imgs/shop/product-1-1-C.jpg" alt="product image">
+                                            </figure>
+                                            <figure class="border-radius-10">
+                                                <img src="../web/imgs/shop/product-1-1-C.jpg" alt="product image">
+                                            </figure>
                                         </div>
                                         <!-- THUMBNAILS -->
                                         <!-- <div class="slider-nav-thumbnails pl-15 pr-15">

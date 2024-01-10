@@ -2,7 +2,6 @@
 
 {% block asset %}
     <link rel="stylesheet" type="text/css" href="{{ alias_web }}/css/main.css" /> 
-    <link rel="stylesheet" type="text/css" href="{{ alias_web }}/css/site.css" /> 
 {% endblock %}
 
 
@@ -65,7 +64,7 @@
                         </div>
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="detail-info">
-                                <h3 class="title-detail mt-30">Colorful Pattern Shirts HD450</h3>
+                                <h3 class="title-detail mt-30">Sản phẩm liên kết</h3>
                                 <div class="product-detail-rating">
                                     <div class="pro-details-brand">
                                         <span> Brands: <a href="shop-grid-right.html">Bootstrap</a></span>
@@ -573,24 +572,39 @@
                     <div class="col-lg-12">
                         <div class="product-detail accordion-detail">
                             <div class="row mb-50">
-                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="col-md-5 col-sm-12 col-xs-12">
                                     <div class="detail-gallery">
                                         <span class="zoom-icon"><i class="fi-rs-search"></i></span>
                                         <!-- MAIN SLIDES -->
                                         <div class="product-image-slider">
-                                            <figure class="border-radius-10">
-                                                <img src="{{ alias_web }}/imgs/shop/product-1-1-C.jpg" alt="product image">
-                                            </figure>
+                                            
+                                            {% set fileArray = product.Images|split(';') %}
+                                            {% for file in fileArray %}
+
+                                                <figure class="border-radius-10">
+                                                    <img src="{{ alias_web }}/imgs/shop/{{ file }}" alt="product image">
+                                                </figure>
+
+                                            {% endfor %}
+                                                
+                                            
                                             
                                         </div>
                                         <!-- THUMBNAILS -->
-                                        <!-- <div class="slider-nav-thumbnails pl-15 pr-15">
-                                            <div><img src="assets/imgs/shop/thumbnail-3.jpg" alt="product image"></div>
-                                        </div> -->
+                                        <div class="slider-nav-thumbnails pl-15 pr-15">
+                                            {% set fileArray = product.Images|split(';') %}
+                                            {% for index, thumb in fileArray %}
+                                                {% if index < 2 %}
+                                                    <div><img src="{{ alias_web }}/imgs/shop/{{ thumb }}" alt="product image"></div>
+                                                {% endif %}
+                                               
+
+                                            {% endfor %}
+                                        </div> 
                                     </div>
                                     <!-- End Gallery -->
                                 </div>
-                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="col-md-5 col-sm-12 col-xs-12">
                                     <div class="detail-info">
                                         <h2 class="title-detail">Colorful Pattern Shirts HD450</h2>
                                         <div class="product-detail-rating">

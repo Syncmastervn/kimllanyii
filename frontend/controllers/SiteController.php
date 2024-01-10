@@ -132,6 +132,15 @@ class SiteController extends Controller
                 ->where(['GroupId'=>$groupId[2]])
                 ->all();
 
+        $product_new = Product::find()
+                ->where(['Rank'=>2])     //Rank = 2 là sản phẩm mới
+                ->all();
+
+        $product_special = Product::find()
+                ->where(['Rank'=>1])    //Rank = 1 là sản phẩm đặc biệt
+                ->all();
+
+
         $searchModel = new SearchModel(); //SearchModel được tạo ra bởi mr Nhân
         $request = Yii::$app->request;
         if($searchModel->load(Yii::$app->request->post()))
@@ -142,12 +151,12 @@ class SiteController extends Controller
             } else
             {
                 //Lấy tất cả Id trong group và thêm vào $groupId
-                return $this->render('index.twig',['searchModel' => $searchModel, 'alias_web'=>Yii::getAlias('@web'),'groups'=>$group,'products'=>$product,'tabs'=>$tab,'groupId'=>$groupId,'tab_one'=>$tab_one,'tab_two'=>$tab_two,'tab_three'=>$tab_three]);
+                return $this->render('index.twig',['searchModel' => $searchModel, 'alias_web'=>Yii::getAlias('@web'),'groups'=>$group,'products'=>$product,'tabs'=>$tab,'groupId'=>$groupId,'tab_one'=>$tab_one,'tab_two'=>$tab_two,'tab_three'=>$tab_three,'products_new'=>$product_new,'products_special'=>$product_special]);
             }
         }else
         {
             //Lấy tất cả Id trong group và thêm vào $groupId
-            return $this->render('index.twig',['searchModel' => $searchModel, 'alias_web'=>Yii::getAlias('@web'),'groups'=>$group,'products'=>$product,'tabs'=>$tab,'groupId'=>$groupId,'tab_one'=>$tab_one,'tab_two'=>$tab_two,'tab_three'=>$tab_three]);
+            return $this->render('index.twig',['searchModel' => $searchModel, 'alias_web'=>Yii::getAlias('@web'),'groups'=>$group,'products'=>$product,'tabs'=>$tab,'groupId'=>$groupId,'tab_one'=>$tab_one,'tab_two'=>$tab_two,'tab_three'=>$tab_three,'products_new'=>$product_new,'products_special'=>$product_special]);
         }
 
         
@@ -198,9 +207,11 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
-    public function actionFullwidth()
+    public function actionFullwidth()   //Hiển thị nội dung sản phẩm
     {
-
+        $data = Yii::$app->request->get('data');
+        $product = Product::findOne($data);
+        return $this->render('product.twig',['alias_web'=>Yii::getAlias('@web'),'product'=>$product]);
     }
 
     /**
@@ -326,10 +337,6 @@ class SiteController extends Controller
         return $this->render('productFull');
     }
 
-    public function actionProduct()
-    {
-        return $this->render('product.twig',['alias_web'=>Yii::getAlias('@web')]);
-    }
     
     public function actionLogg()
     {

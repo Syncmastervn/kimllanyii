@@ -166,9 +166,9 @@ class SiteController extends Controller
             $recordId = $record->Id; //Lấy Id của record vừa lưu trong CSDL
 
             //Set to cache 
-            Yii::$app->cache->set('productName',$record->Name,30);
-            Yii::$app->cache->set('productId',$recordId,30);
-            Yii::$app->cache->set('ImageNames','',30);
+            Yii::$app->cache->set('productName',$record->Name,60);
+            Yii::$app->cache->set('productId',$recordId,60);
+            Yii::$app->cache->set('ImageNames','',60);
 
             $model = new Pictures();
             $model->ProductId = $recordId;
@@ -181,6 +181,7 @@ class SiteController extends Controller
         }
         
     }
+
 
     public function actionProduct_edit()
     {
@@ -199,7 +200,6 @@ class SiteController extends Controller
         {
             return $this->render('productEdit',['model'=>$model,'product'=>$product]);
         }
-        
     }
 
     public function actionProduct_manage()

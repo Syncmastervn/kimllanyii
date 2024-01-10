@@ -743,7 +743,10 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                                                 <div class=\"product-img-action-wrap\">
                                                 
                                                     <div class=\"product-img product-img-zoom\">
-                                                        <a href=\"shop-product-right.html\">
+                                                        <a href=\"";
+            // line 665
+            echo twig_escape_filter($this->env, $this->env->getExtension('yii\twig\Extension')->path("site/fullwidth", array("data" => yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Id", array()))), "html", null, true);
+            echo "\">
                                                             ";
             // line 666
             $context["fileArray"] = twig_split_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Images", array()), ";");
@@ -821,79 +824,22 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                                             <div class=\"product-cart-wrap mb-30\">
                                                 <div class=\"product-img-action-wrap\">
                                                     <div class=\"product-img product-img-zoom\">
-                                                        <a href=\"shop-product-right.html\">
-                                                            <img class=\"default-img\" src=\"";
-            // line 708
-            echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
-            echo "/imgs/shop/ID1_1_.jpg\" alt=\"\">
-                                                            <img class=\"hover-img\" src=\"";
-            // line 709
-            echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
-            echo "/imgs/shop/ID1_2_.jpg\" alt=\"\">
-                                                        </a>
-                                                    </div>
-                                                    
-                                                    <div class=\"product-badges product-badges-position product-badges-mrg\">
-                                                        <span class=\"hot\">Hot</span>
-                                                    </div>
-                                                </div>
-                                                <div class=\"product-content-wrap\">
-                                                    <div class=\"product-category\">
-                                                        <a href=\"shop-grid-right.html\">Vàng 18k</a>
-                                                    </div>
-                                                    <h2><a href=\"shop-product-right.html\">";
-            // line 721
-            echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Name", array()), "html", null, true);
-            echo "</a></h2>
-                                                    <div class=\"product-price\">
-                                                        <span>";
-            // line 723
-            echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Price", array()), "html", null, true);
-            echo "</span>
-                                                    </div>
-                                                    <div class=\"product-action-1 show\">
-                                                        <a aria-label=\"Add To Cart\" class=\"action-btn hover-up\" href=\"shop-cart.html\"><i class=\"fi-rs-shopping-bag-add\"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                    </div>
-                            ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 732
-        echo "                        </div>
-
-                    </div>
-
-                    <div class=\"tab-pane fade\" id=\"tab-three\" role=\"tabpanel\" aria-labelledby=\"tab-three\"*>
-
-                        <div class=\"row product-grid-4\">
-                            ";
-        // line 739
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["tab_three"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 740
-            echo "                                    
-                                        <div class=\"col-lg-3 col-md-4 col-12 col-sm-6\">
-                                            <div class=\"product-cart-wrap mb-30\">
-                                                <div class=\"product-img-action-wrap\">
-                                                    <div class=\"product-img product-img-zoom\">
-                                                        <a href=\"shop-product-right.html\">
+                                                        <a href=\"";
+            // line 707
+            echo twig_escape_filter($this->env, $this->env->getExtension('yii\twig\Extension')->path("site/fullwidth", array("data" => yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Id", array()))), "html", null, true);
+            echo "\">
                                                             ";
-            // line 746
+            // line 708
             $context["fileArray"] = twig_split_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Images", array()), ";");
-            // line 747
+            // line 709
             echo "                                                            ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["fileArray"] ?? null));
             foreach ($context['_seq'] as $context["index"] => $context["file"]) {
-                // line 748
+                // line 710
                 echo "                                                                ";
                 $context["imgClass"] = ((($context["index"] == 1)) ? ("hover-img") : ("default-img"));
-                // line 749
+                // line 711
                 echo "                                                                <img class=\"";
                 echo twig_escape_filter($this->env, ($context["imgClass"] ?? null), "html", null, true);
                 echo "\" src=\"";
@@ -906,7 +852,7 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['index'], $context['file'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 751
+            // line 713
             echo "                                                        </a>
                                                     </div>
                                                     
@@ -919,12 +865,12 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                                                         <a href=\"shop-grid-right.html\">Vàng 18k</a>
                                                     </div>
                                                     <h2><a href=\"shop-product-right.html\">";
-            // line 762
+            // line 724
             echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Name", array()), "html", null, true);
             echo "</a></h2>
                                                     <div class=\"product-price\">
                                                         <span>";
-            // line 764
+            // line 726
             echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Price", array()), "html", null, true);
             echo "</span>
                                                     </div>
@@ -939,7 +885,87 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 773
+        // line 735
+        echo "                        </div>
+
+                    </div>
+
+                    <div class=\"tab-pane fade\" id=\"tab-three\" role=\"tabpanel\" aria-labelledby=\"tab-three\"*>
+
+                        <div class=\"row product-grid-4\">
+                            ";
+        // line 742
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["tab_three"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 743
+            echo "                                    
+                                        <div class=\"col-lg-3 col-md-4 col-12 col-sm-6\">
+                                            <div class=\"product-cart-wrap mb-30\">
+                                                <div class=\"product-img-action-wrap\">
+                                                    <div class=\"product-img product-img-zoom\">
+                                                        <a href=\"";
+            // line 748
+            echo twig_escape_filter($this->env, $this->env->getExtension('yii\twig\Extension')->path("site/fullwidth", array("data" => yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Id", array()))), "html", null, true);
+            echo "\">
+                                                            ";
+            // line 749
+            $context["fileArray"] = twig_split_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Images", array()), ";");
+            // line 750
+            echo "                                                            ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(($context["fileArray"] ?? null));
+            foreach ($context['_seq'] as $context["index"] => $context["file"]) {
+                // line 751
+                echo "                                                                ";
+                $context["imgClass"] = ((($context["index"] == 1)) ? ("hover-img") : ("default-img"));
+                // line 752
+                echo "                                                                <img class=\"";
+                echo twig_escape_filter($this->env, ($context["imgClass"] ?? null), "html", null, true);
+                echo "\" src=\"";
+                echo twig_escape_filter($this->env, ($context["alias_web"] ?? null), "html", null, true);
+                echo "/imgs/shop/";
+                echo twig_escape_filter($this->env, $context["file"], "html", null, true);
+                echo "\" alt=\"\">
+                                                            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['index'], $context['file'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 754
+            echo "                                                        </a>
+                                                    </div>
+                                                    
+                                                    <div class=\"product-badges product-badges-position product-badges-mrg\">
+                                                        <span class=\"hot\">Hot</span>
+                                                    </div>
+                                                </div>
+                                                <div class=\"product-content-wrap\">
+                                                    <div class=\"product-category\">
+                                                        <a href=\"shop-grid-right.html\">Vàng 18k</a>
+                                                    </div>
+                                                    <h2><a href=\"shop-product-right.html\">";
+            // line 765
+            echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Name", array()), "html", null, true);
+            echo "</a></h2>
+                                                    <div class=\"product-price\">
+                                                        <span>";
+            // line 767
+            echo twig_escape_filter($this->env, yii\twig\Template::attribute($this->env, $this->getSourceContext(), $context["item"], "Price", array()), "html", null, true);
+            echo "</span>
+                                                    </div>
+                                                    <div class=\"product-action-1 show\">
+                                                        <a aria-label=\"Add To Cart\" class=\"action-btn hover-up\" href=\"shop-cart.html\"><i class=\"fi-rs-shopping-bag-add\"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 776
         echo "                        </div>
 
                     </div>
@@ -963,13 +989,10 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                     <div class=\"heading-tab-right wow fadeIn animated\">
                         <ul class=\"nav nav-tabs right no-border\" id=\"myTab-1\" role=\"tablist\">
                             <li class=\"nav-item\" role=\"presentation\">
-                                <button class=\"nav-link active\" id=\"nav-tab-one-1\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-one-1\" type=\"button\" role=\"tab\" aria-controls=\"tab-one\" aria-selected=\"true\">Featured</button>
+                                <button class=\"nav-link active\" id=\"nav-tab-one-1\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-one-1\" type=\"button\" role=\"tab\" aria-controls=\"tab-one\" aria-selected=\"true\">SP Mới</button>
                             </li>
                             <li class=\"nav-item\" role=\"presentation\">
-                                <button class=\"nav-link\" id=\"nav-tab-two-1\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-two-1\" type=\"button\" role=\"tab\" aria-controls=\"tab-two\" aria-selected=\"false\">Popular</button>
-                            </li>
-                            <li class=\"nav-item\" role=\"presentation\">
-                                <button class=\"nav-link\" id=\"nav-tab-three-1\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-three-1\" type=\"button\" role=\"tab\" aria-controls=\"tab-three\" aria-selected=\"false\">New added</button>
+                                <button class=\"nav-link\" id=\"nav-tab-two-1\" data-bs-toggle=\"tab\" data-bs-target=\"#tab-two-1\" type=\"button\" role=\"tab\" aria-controls=\"tab-two\" aria-selected=\"false\">Đặc biệt</button>
                             </li>
                         </ul>
                     </div>
@@ -1372,199 +1395,7 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
                                     </div>
                                 </div>
                             </div>
-                            <div class=\"tab-pane fade\" id=\"tab-three-1\" role=\"tabpanel\" aria-labelledby=\"tab-three-1\">
-                                <div class=\"carausel-4-columns-cover arrow-center position-relative\">
-                                    <div class=\"slider-arrow slider-arrow-2 carausel-4-columns-arrow\" id=\"carausel-4-columns-3-arrows\"></div>
-                                    <div class=\"carausel-4-columns carausel-arrow-center\" id=\"carausel-4-columns-3\">
-                                        <div class=\"product-cart-wrap\">
-                                            <div class=\"product-img-action-wrap\">
-                                                <div class=\"product-img product-img-zoom\">
-                                                    <a href=\"shop-product-right.html\">
-                                                        <img class=\"default-img\" src=\"../web/imgs/shop/product-8-1.jpg\" alt=\"\">
-                                                        <img class=\"hover-img\" src=\"../web/imgs/shop/product-8-2.jpg\" alt=\"\">
-                                                    </a>
-                                                </div>
-                                                <div class=\"product-action-1\">
-                                                    <a aria-label=\"Quick view\" class=\"action-btn small hover-up\" data-bs-toggle=\"modal\" data-bs-target=\"#quickViewModal\">
-                                                        <i class=\"fi-rs-eye\"></i></a>
-                                                    <a aria-label=\"Add To Wishlist\" class=\"action-btn small hover-up\" href=\"shop-wishlist.html\"><i class=\"fi-rs-heart\"></i></a>
-                                                    <a aria-label=\"Compare\" class=\"action-btn small hover-up\" href=\"shop-compare.html\"><i class=\"fi-rs-shuffle\"></i></a>
-                                                </div>
-                                                <div class=\"product-badges product-badges-position product-badges-mrg\">
-                                                    <span class=\"hot\">Hot</span>
-                                                </div>
-                                            </div>
-                                            <div class=\"product-content-wrap\">
-                                                <div class=\"product-category\">
-                                                    <a href=\"shop-grid-right.html\">Watch</a>
-                                                </div>
-                                                <h2><a href=\"shop-product-right.html\">Cotton Leaf Printed</a></h2>
-                                                <div class=\"rating-result\" title=\"90%\">
-                                                    <span>
-                                                        <span>70%</span>
-                                                    </span>
-                                                </div>
-                                                <div class=\"product-price\">
-                                                    <span>\$238.85 </span>
-                                                    <span class=\"old-price\">\$245.8</span>
-                                                </div>
-                                                <div class=\"product-action-1 show\">
-                                                    <a aria-label=\"Add To Cart\" class=\"action-btn hover-up\" href=\"shop-cart.html\"><i class=\"fi-rs-shopping-bag-add\"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"product-cart-wrap\">
-                                            <div class=\"product-img-action-wrap\">
-                                                <div class=\"product-img product-img-zoom\">
-                                                    <a href=\"shop-product-right.html\">
-                                                        <img class=\"default-img\" src=\"../web/imgs/shop/product-13-1.jpg\" alt=\"\">
-                                                        <img class=\"hover-img\" src=\"../web/imgs/shop/product-13-2.jpg\" alt=\"\">
-                                                    </a>
-                                                </div>
-                                                <div class=\"product-action-1\">
-                                                    <a aria-label=\"Quick view\" class=\"action-btn small hover-up\" data-bs-toggle=\"modal\" data-bs-target=\"#quickViewModal\">
-                                                    <i class=\"fi-rs-eye\"></i></a>
-                                                    <a aria-label=\"Add To Wishlist\" class=\"action-btn small hover-up\" href=\"shop-wishlist.html\"><i class=\"fi-rs-heart\"></i></a>
-                                                    <a aria-label=\"Compare\" class=\"action-btn small hover-up\" href=\"shop-compare.html\"><i class=\"fi-rs-shuffle\"></i></a>
-                                                </div>
-                                                <div class=\"product-badges product-badges-position product-badges-mrg\">
-                                                    <span class=\"new\">New</span>
-                                                </div>
-                                            </div>
-                                            <div class=\"product-content-wrap\">
-                                                <div class=\"product-category\">
-                                                    <a href=\"shop-grid-right.html\">Watch</a>
-                                                </div>
-                                                <h2><a href=\"shop-product-right.html\">Smart Speaker</a></h2>
-                                                <div class=\"rating-result\" title=\"90%\">
-                                                    <span>
-                                                        <span>70%</span>
-                                                    </span>
-                                                </div>
-                                                <div class=\"product-price\">
-                                                    <span>\$138.85 </span>
-                                                    <span class=\"old-price\">\$145.8</span>
-                                                </div>
-                                                <div class=\"product-action-1 show\">
-                                                    <a aria-label=\"Add To Cart\" class=\"action-btn hover-up\" href=\"shop-cart.html\"><i class=\"fi-rs-shopping-bag-add\"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"product-cart-wrap\">
-                                            <div class=\"product-img-action-wrap\">
-                                                <div class=\"product-img product-img-zoom\">
-                                                    <a href=\"shop-product-right.html\">
-                                                        <img class=\"default-img\" src=\"../web/imgs/shop/product-14-1.jpg\" alt=\"\">
-                                                        <img class=\"hover-img\" src=\"../web/imgs/shop/product-14-2.jpg\" alt=\"\">
-                                                    </a>
-                                                </div>
-                                                <div class=\"product-action-1\">
-                                                    <a aria-label=\"Quick view\" class=\"action-btn small hover-up\" data-bs-toggle=\"modal\" data-bs-target=\"#quickViewModal\">
-                                                        <i class=\"fi-rs-eye\"></i>
-                                                    </a>
-                                                    <a aria-label=\"Add To Wishlist\" class=\"action-btn small hover-up\" href=\"shop-wishlist.html\"><i class=\"fi-rs-heart\"></i></a>
-                                                    <a aria-label=\"Compare\" class=\"action-btn small hover-up\" href=\"shop-compare.html\"><i class=\"fi-rs-shuffle\"></i></a>
-                                                </div>
-                                                <div class=\"product-badges product-badges-position product-badges-mrg\">
-                                                    <span class=\"best\">Best Sell</span>
-                                                </div>
-                                            </div>
-                                            <div class=\"product-content-wrap\">
-                                                <div class=\"product-category\">
-                                                    <a href=\"shop-grid-right.html\">Watch</a>
-                                                </div>
-                                                <h2><a href=\"shop-product-right.html\">Hugy Speaker</a></h2>
-                                                <div class=\"rating-result\" title=\"90%\">
-                                                    <span>
-                                                        <span>70%</span>
-                                                    </span>
-                                                </div>
-                                                <div class=\"product-price\">
-                                                    <span>\$152.85 </span>
-                                                    <span class=\"old-price\">\$156.8</span>
-                                                </div>
-                                                <div class=\"product-action-1 show\">
-                                                    <a aria-label=\"Add To Cart\" class=\"action-btn hover-up\" href=\"shop-cart.html\"><i class=\"fi-rs-shopping-bag-add\"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"product-cart-wrap\">
-                                            <div class=\"product-img-action-wrap\">
-                                                <div class=\"product-img product-img-zoom\">
-                                                    <a href=\"shop-product-right.html\">
-                                                        <img class=\"default-img\" src=\"../web/imgs/shop/product-15-1.jpg\" alt=\"\">
-                                                        <img class=\"hover-img\" src=\"../web/imgs/shop/product-15-2.jpg\" alt=\"\">
-                                                    </a>
-                                                </div>
-                                                <div class=\"product-action-1\">
-                                                    <a aria-label=\"Quick view\" class=\"action-btn small hover-up\" data-bs-toggle=\"modal\" data-bs-target=\"#quickViewModal\">
-                                                    <i class=\"fi-rs-eye\"></i></a>
-                                                    <a aria-label=\"Add To Wishlist\" class=\"action-btn small hover-up\" href=\"shop-wishlist.html\"><i class=\"fi-rs-heart\"></i></a>
-                                                    <a aria-label=\"Compare\" class=\"action-btn small hover-up\" href=\"shop-compare.html\"><i class=\"fi-rs-shuffle\"></i></a>
-                                                </div>
-                                                <div class=\"product-badges product-badges-position product-badges-mrg\">
-                                                    <span class=\"hot\">-12%</span>
-                                                </div>
-                                            </div>
-                                            <div class=\"product-content-wrap\">
-                                                <div class=\"product-category\">
-                                                    <a href=\"shop-grid-right.html\">Watch</a>
-                                                </div>
-                                                <h2><a href=\"shop-product-right.html\">Smart Speaker</a></h2>
-                                                <div class=\"rating-result\" title=\"90%\">
-                                                    <span>
-                                                        <span>70%</span>
-                                                    </span>
-                                                </div>
-                                                <div class=\"product-price\">
-                                                    <span>\$238.85 </span>
-                                                    <span class=\"old-price\">\$245.8</span>
-                                                </div>
-                                                <div class=\"product-action-1 show\">
-                                                    <a aria-label=\"Add To Cart\" class=\"action-btn hover-up\" href=\"shop-cart.html\"><i class=\"fi-rs-shopping-bag-add\"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"product-cart-wrap\">
-                                            <div class=\"product-img-action-wrap\">
-                                                <div class=\"product-img product-img-zoom\">
-                                                    <a href=\"shop-product-right.html\">
-                                                        <img class=\"default-img\" src=\"../web/imgs/shop/product-11-1.jpg\" alt=\"\">
-                                                        <img class=\"hover-img\" src=\"../web/imgs/shop/product-11-2.jpg\" alt=\"\">
-                                                    </a>
-                                                </div>
-                                                <div class=\"product-action-1\">
-                                                    <a aria-label=\"Quick view\" class=\"action-btn small hover-up\" data-bs-toggle=\"modal\" data-bs-target=\"#quickViewModal\">
-                                                    <i class=\"fi-rs-eye\"></i></a>
-                                                    <a aria-label=\"Add To Wishlist\" class=\"action-btn small hover-up\" href=\"shop-wishlist.html\"><i class=\"fi-rs-heart\"></i></a>
-                                                    <a aria-label=\"Compare\" class=\"action-btn small hover-up\" href=\"shop-compare.html\"><i class=\"fi-rs-shuffle\"></i></a>
-                                                </div>
-                                                <div class=\"product-badges product-badges-position product-badges-mrg\">
-                                                    <span class=\"sale\">Sale</span>
-                                                </div>
-                                            </div>
-                                            <div class=\"product-content-wrap\">
-                                                <div class=\"product-category\">
-                                                    <a href=\"shop-grid-right.html\">Watch</a>
-                                                </div>
-                                                <h2><a href=\"shop-product-right.html\">Cotton Leaf Printed</a></h2>
-                                                <div class=\"rating-result\" title=\"90%\">
-                                                    <span>
-                                                        <span>70%</span>
-                                                    </span>
-                                                </div>
-                                                <div class=\"product-price\">
-                                                    <span>\$238.85 </span>
-                                                    <span class=\"old-price\">\$245.8</span>
-                                                </div>
-                                                <div class=\"product-action-1 show\">
-                                                    <a aria-label=\"Add To Cart\" class=\"action-btn hover-up\" href=\"shop-cart.html\"><i class=\"fi-rs-shopping-bag-add\"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                         <!--End tab-content-->
                     </div>
@@ -1679,7 +1510,7 @@ class __TwigTemplate_18ba45829e23ecc1fe7c4c5e3940dae38c2d3d7f92cfaecc0a8fbbbb155
 
     public function getDebugInfo()
     {
-        return array (  943 => 773,  928 => 764,  923 => 762,  910 => 751,  897 => 749,  894 => 748,  889 => 747,  887 => 746,  879 => 740,  875 => 739,  866 => 732,  851 => 723,  846 => 721,  831 => 709,  827 => 708,  819 => 702,  815 => 701,  805 => 693,  790 => 684,  785 => 682,  772 => 671,  759 => 669,  756 => 668,  751 => 667,  749 => 666,  740 => 659,  736 => 658,  720 => 644,  700 => 640,  696 => 638,  692 => 637,  634 => 582,  474 => 425,  469 => 424,  467 => 423,  239 => 198,  234 => 197,  232 => 196,  42 => 8,  39 => 7,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  969 => 776,  954 => 767,  949 => 765,  936 => 754,  923 => 752,  920 => 751,  915 => 750,  913 => 749,  909 => 748,  902 => 743,  898 => 742,  889 => 735,  874 => 726,  869 => 724,  856 => 713,  843 => 711,  840 => 710,  835 => 709,  833 => 708,  829 => 707,  822 => 702,  818 => 701,  808 => 693,  793 => 684,  788 => 682,  775 => 671,  762 => 669,  759 => 668,  754 => 667,  752 => 666,  748 => 665,  740 => 659,  736 => 658,  720 => 644,  700 => 640,  696 => 638,  692 => 637,  634 => 582,  474 => 425,  469 => 424,  467 => 423,  239 => 198,  234 => 197,  232 => 196,  42 => 8,  39 => 7,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     public function getSourceContext()

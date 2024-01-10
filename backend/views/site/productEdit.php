@@ -35,7 +35,13 @@ use yii\widgets\LinkPager;
                                     <?= $form->field($model,'Price')->textInput(['rows'=>4,'value'=>$product->Price]); ?>
                                 </div> 
                                 <div class="mb-4">
-                                    <button class="btn btn-primary">Tạo mới</button>
+                                    <?= $form->field($model,'UserId')->textInput(['rows'=>4,'readonly'=> true,'value'=>$product->UserId]); ?>
+                                </div>
+                                <div class="mb-4">
+                                    <?= $form->field($model,'Status')->textInput(['rows'=>4,'readonly'=>true,'value'=>$product->Status]); ?>
+                                </div>
+                                <div class="mb-4">
+                                    <button class="btn btn-primary">Lưu thông tin</button>
                                  </div>
                                 <label class="form-check mb-4">
                                     <!-- <input class="form-check-input" type="checkbox" value="">
